@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Benachrichtigungen - Fahrschul Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .notification-card {
+            margin-bottom: 15px;
+        }
+
+        .notification-read {
+            background-color: #f8f9fa;
+        }
+
+        .notification-unread {
+            background-color: #e2f0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar & Navbar (reuse from dashboard) -->
+    <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="#"><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                <!-- JS will populate this based on login status -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <a href="mpu.html" class="nav-item nav-link">MPU</a>
+                        <a href="pakete.html" class="nav-item nav-link">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+    <!-- Page Header -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4">Benachrichtigungen</h3>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                <li class="breadcrumb-item"><a href="armaturenbrett.html">Dashboard</a></li>
+                <li class="breadcrumb-item active text-white">Benachrichtigungen</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Notifications Content -->
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <h1>Your Notifications</h1>
+            <p>Here are all recent updates related to your lessons and account.</p>
+        </div>
+
+        <div id="notificationsContainer">
+            <!-- Notifications will be rendered here -->
+        </div>
+
+        <div class="text-end mt-4">
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid footer py-5">
+        <div class="container py-5 text-center">
+            <p class="text-white mb-0">&copy; 2025 Your Driving School. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Load jQuery locally -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Load user notifications
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        const notificationsContainer = document.getElementById("notificationsContainer");
+
+        if (!user) {
+            notificationsContainer.innerHTML = "<p>Please log in to view your notifications.</p>";
+        } else {
+            const notifications = user.notifications || [
+                { id: 1, type: "lesson", message: "Your in-car lesson on 2025-08-25 is confirmed.", status: "unread", date: "2025-08-20" },
+                { id: 2, type: "payment", message: "Your payment of $150 is pending.", status: "read", date: "2025-08-18" },
+                { id: 3, type: "lesson", message: "Classroom lesson on 2025-08-27 has been rescheduled.", status: "unread", date: "2025-08-21" }
+            ];
+
+            notificationsContainer.innerHTML = notifications.map(notif => `
+                <div class="card p-3 notification-card ${notif.status === 'unread' ? 'notification-unread' : 'notification-read'}">
+                    <div class="d-flex justify-content-between">
+                        <span>${notif.message}</span>
+                        <small class="text-muted">${notif.date}</small>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

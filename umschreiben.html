@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Führerschein Europa - Führerschein ohne MPU (Idiotentest) </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                    <!-- JS will populate this based on login status -->
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <a href="mpu.html" class="nav-item nav-link">MPU</a>
+                        <a href="pakete.html" class="nav-item nav-link">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">Führerschein Umschreiben</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                    <li class="breadcrumb-item"><a href="leistungen.html">Leistungen</a></li>
+                    <li class="breadcrumb-item active text-white">Umschreiben</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div>
+                            <img src="img/führerscheinerwerb-in-deutschland.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">Umschreibung Ihres Führerscheins <span class="text-primary">in EU</span></h1>
+                        <p class="mb-4">Die Gründe für eine Führerscheinumschreibung können vielfältig sein. Nutzen Sie unseren neuen, exklusiven Service und wandeln Sie Ihren ausländischen Führerschein in einen gültigen EU-Führerschein um – und genießen Sie die Fahrt auf deutschen Straßen! Lkw- oder Motorradführerscheine können nicht immer umgeschrieben werden. Das hängt vom Herkunftsland ab. Ein kanadischer Motorradführerschein ist beispielsweise nicht umschreibbar. Bei EU- und EWR-Führerscheinen ist dies kein Problem.</p>
+                        <p class="mb-4">Sie können einen abgelaufenen EU- oder EWR-Führerschein umschreiben lassen. Ein abgelaufener Führerschein aus einem anderen Land kann nicht umgeschrieben werden. Auch ein vorläufiger Führerschein oder eine Lernfahrerlaubnis können nicht umgeschrieben werden. Sie müssen Ihren ausländischen Führerschein vor Ihrem Umzug nach Deutschland erwerben. Sie können nicht nach Deutschland ziehen, woanders einen Führerschein erwerben und ihn anschließend umschreiben lassen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Faq Start -->
+
+        <div class="container-fluid ExploreTour">
+            <div class="container py-5">
+                <div class="text-center">
+                    <h2>Dein Führerschein - Von Leicht Bis Schwer</h2>
+                </div>
+            <div class="row">
+                    <!-- LEFT COLUMN -->
+                    <div class="col-lg-6">
+                        <div class="accordion" id="travelAccordion">
+                        <!-- Item 1 -->
+                         <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneLeft">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOneLeft" aria-expanded="fal" aria-controls="collapseOneLeft">
+                                Melden Sie zunächst Ihre Adresse an.
+                            </button>
+                            </h2>
+                            <div id="collapseOneLeft" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOneLeft" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Melden Sie sich zunächst an. Für die Umschreibung Ihres Führerscheins benötigen Sie eine Anmeldebestätigung.</p>
+                                <h6>So melden Sie Ihre Adresse in Berlin an</h6>
+                                <p>Vereinbaren Sie einen Termin beim Bürgeramt. Wenn Sie sich nicht online anmelden können, müssen Sie persönlich im Bürgeramt erscheinen. Sie können in jedes Berliner Bürgeramt gehen. Sie benötigen einen Termin. Dieser muss nach Ihrem Einzugsdatum liegen. Sie haben 14 Tage Zeit, sich anzumelden, aber in Berlin kümmert sich niemand darum. Sie können die Anmeldung auch noch Monate später erledigen.</p>
+                                <ul>
+                                    <li>Wenn Sie keinen Termin finden, versuchen Sie es später erneut. Neue Termine werden während der Geschäftszeiten vergeben, meist vormittags.</li>
+                                    <li>Sie können mehrere Personen mit einem Termin anmelden, wenn Sie zusammen gewohnt haben und zusammenziehen. So können Sie beispielsweise die Anmeldung für Ihre ganze Familie gleichzeitig durchführen.</li>
+                                </ul>                                
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwoLeft">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwoLeft" aria-expanded="false" aria-controls="collapseTwoLeft">
+                                Überprüfen Sie die Anforderungen für Ihr Land
+                            </button>
+                            </h2>
+                            <div id="collapseTwoLeft" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwoLeft" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Fordern Sie es online oder persönlich im Bürgeramt an. Es ist online kostenlos oder persönlich für 10 € erhältlich.</p>
+                                <ul>
+                                    <li><strong style="color:black;">Online:</strong> Beantragen Sie eine Meldebescheinigung online als PDF. Um diesen Service nutzen zu können, benötigen Sie eine gemeldete Adresse in Berlin und eine elektronische ID, z. B. eine Aufenthaltserlaubnis aus Plastik, einen deutschen Reisepass oder einen Personalausweis.</li>
+                                    <li><strong style="color:black;">Persönlich:</strong> Vereinbaren Sie einen Termin beim Bürgeramt. Sie können in jedes Berliner Bürgeramt gehen. Bringen Sie zu Ihrem Termin Ihren Reisepass oder Personalausweis und 10 € Gebühr mit. Sie können in der Regel mit Girocard, Visa oder Mastercard bezahlen. Die Bezahlung hängt vom Bürgeramt ab.</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThreeLeft">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThreeLeft" aria-expanded="false" aria-controls="collapseThreeLeft">
+                                Nehmen Sie an einem Erste-Hilfe-Kurs teil
+                            </button>
+                            </h2>
+                            <div id="collapseThreeLeft" class="accordion-collapse collapse"
+                            aria-labelledby="headingThreeLeft" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wenn Ihr Führerschein nicht aus einem EU-, EWR- oder Annex-11-Land stammt, müssen Sie einen Erste-Hilfe-Kurs absolvieren. Dieser dauert etwa 9 Stunden und kostet ca. 70,13 €. Wo Sie einen Erste-Hilfe-Kurs auf Englisch absolvieren können:
+                                </p>
+                                <ul>
+                                    <li>Fahrschule Europa</li>
+                                    <li>Deutsches Rotes Kreuz</li>
+                                    <li>Erste Hilfe Station</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFourLeft">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFourLeft" aria-expanded="false" aria-controls="collapseFourLeft">
+                                Gesundheitscheck und Sehtest
+                            </button>
+                            </h2>
+                            <div id="collapseFourLeft" class="accordion-collapse collapse"
+                            aria-labelledby="headingFourLeft" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wenn Ihr Führerschein nicht aus einem EU-, EWR- oder Annex-11-Land stammt, müssen Sie einen Sehtest machen. Er dauert nur wenige Minuten und kostet weniger als 10 €. Wo Sie einen Sehtest machen können:
+                                </p>
+                                <ul>
+                                    <li>Beim Optiker. Fielmann bietet kostenlose Sehtests an.</li>
+                                    <li>Im Erste-Hilfe-Kurs. Einige Erste-Hilfe-Schulen bieten Sehtests an.</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN (ACCORDION) -->
+                    <div class="col-lg-6">
+                        <div class="accordion" id="travelAccordion">
+                        <!-- Item 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneRight">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOneRight" aria-expanded="true" aria-controls="collapseOneRight">
+                                Fahrstunden nehmen
+                            </button>
+                            </h2>
+                            <div id="collapseOneRight" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOneRight" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Fahrstunden sind zwar optional, aber eine gute Idee. Wenn Sie aus Nordamerika kommen, gelten hier völlig andere Regeln. Sie sind noch nicht bereit, in Deutschland Auto zu fahren.</p>
+                                <p>Melden Sie sich bei unserer englischsprachigen Fahrschule in Nürnberg, Frankfurt, Berlin, München, Hamburg, Köln, Dresden, Düsseldorf, Essen, Bremen, Stuttgart, Leipzig, Dortmund und Hannover an.</p>
+                                <p>Wenn Sie keine Fahrstunden nehmen, lesen Sie den Leitfaden „Route to Germany“ zum Autofahren in Deutschland.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwoRight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwoRight" aria-expanded="false" aria-controls="collapseTwoRight">
+                                Termin beim Bürgeramt vereinbaren
+                            </button>
+                            </h2>
+                            <div id="collapseTwoRight" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwoRight" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Buchen Sie einen Termin beim Bürgeramt. In Berlin sind Termine schwer zu bekommen. Der nächste Termin kann in einigen Wochen sein.</p>
+                                <ul>
+                                    <li>Termin buchen (EU- oder EWR-Führerschein)</li>
+                                    <li>Termin buchen (Anlage 11 und andere Länder)</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 7 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThreeRight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThreeRight" aria-expanded="false" aria-controls="collapseThreeRight">
+                                Gehen Sie zu Ihrem Termin
+                            </button>
+                            </h2>
+                            <div id="collapseThreeRight" class="accordion-collapse collapse"
+                            aria-labelledby="headingThreeRight" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Gehen Sie zu Ihrem Termin im Bürgeramt und bringen Sie alle erforderlichen Dokumente mit:
+                                </p>
+                                <ul>
+                                    <li><strong style="color:black;">Foreign driving licence:</strong> Bring the original licence, not a copy. If it’s not an EU or EEA licence, it must still be valid.</li>
+                                    <li><strong style="color:black;">Fotokopie Ihres ausländischen Führerscheins</strong></li>
+                                    <li><strong style="color:black;">Reisepass oder Personalausweis</strong></li>
+                                    <li><strong style="color:black;">Passfoto:</strong>  Biometrische Bilder erhalten Sie für ca. 10 €.</li>
+                                    <li><strong style="color:black;">Anmeldebestätigung:</strong>  Diese bestätigt Ihren Wohnsitz in Berlin. Andere Wohnsitznachweise werden möglicherweise akzeptiert.</li>
+                                    <li><strong style="color:black;">Girocard oder Bargeld:</strong> Sie zahlen eine Gebühr von 37,50 €. Visa und Mastercard werden teilweise akzeptiert.</li>
+                                </ul>
+                                <i>Wenn Ihr Führerschein nicht aus einem EU- oder EWR-Land stammt, müssen Sie außerdem Folgendes mitbringen:</i>
+                                <ul>
+                                    <li><strong style="color:black;">Beglaubigte Übersetzung Ihres Führerscheins:</strong> Wenn Ihr Führerschein nicht auf Deutsch ausgestellt ist, benötigen Sie eine beglaubigte Übersetzung oder einen internationalen Führerschein. In Berlin werden auch englischsprachige Führerscheine akzeptiert. Besorgen Sie sich eine Beglaubigung bei Red Tape Translation, Lingoking oder dem ADAC. Die Kosten betragen ca. 60 €. In manchen Städten werden nur beglaubigte Übersetzungen, keine internationalen Führerscheine akzeptiert.</li>
+                                </ul>
+                                <i>Wenn Ihr Führerschein nicht aus einem EU-, EWR- oder Annex-11-Land stammt, müssen Sie zusätzlich Folgendes mitbringen:</i>
+                                <ul>
+                                    <li><strong style="color:black;">Sehtestbescheinigung</strong></li>
+                                    <li><strong style="color:black;">Erste-Hilfe-Kursbescheinigung</strong></li>
+                                </ul>
+                                <p>Der Termin dauert nur wenige Minuten und kostet 37,50 €. Das Bürgeramt leitet Ihre Unterlagen an die Fahrerlaubnisbehörde weiter, die diese mit der Botschaft Ihres Landes abgleicht. In Berlin behalten Sie Ihren ausländischen Führerschein während der Wartezeit. Er wird Ihnen erst später, wenn Sie Ihren deutschen Führerschein erhalten, eingezogen.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 8 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFourRight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFourRight" aria-expanded="false" aria-controls="collapseFourRight">
+                                Warten und deutschen Führerschein abholen
+                            </button>
+                            </h2>
+                            <div id="collapseFourRight" class="accordion-collapse collapse"
+                            aria-labelledby="headingFourRight" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>In Berlin beträgt die Wartezeit zwei bis vier Monate. In anderen Städten dauert es zwei bis sechs Wochen. Sie müssen nichts weiter tun. Sobald Ihr neuer Führerschein fertig ist, erhalten Sie einen Brief.</p>
+                                <p>Melden Sie sich bei unserer englischsprachigen Fahrschule in Nürnberg, Frankfurt, Berlin, München, Hamburg, Köln, Dresden, Düsseldorf, Essen, Bremen, Stuttgart, Leipzig, Dortmund und Hannover an.</p>
+                                <p>Wenn Sie keine Fahrstunden nehmen, lesen Sie den Leitfaden „Route to Germany“ zum Autofahren in Deutschland.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Faq End -->
+
+
+        <!--Banner Start-->
+
+        <div class="banner-section">
+        <img src="img/fahrschule-in-berlin.jpg" alt="Banner" class="banner-img">
+
+        <!-- Overlay text -->
+        <div class="banner-text">Deutsch Führerschein Machen</div>
+
+        <!-- Overlay button -->
+        <a href="#" class="btn btn-primary rounded-pill banner-btn">Jetzt Entdecken</a>
+        </div>
+
+        <!--Banner End-->
+
+
+        <!-- Kosten Start -->
+         
+        <div id="fuehrerschein-kosten-de" class="py-5 bg-light">
+            <div class="container">
+                <!-- FIRST DIV: Intro -->
+                <header class="mb-4">
+                <h2 class="mb-2">Führerschein Umschreiben in Deutschland – Klasse B</h2>
+                </header>
+
+                <!-- SECOND DIV: Example calculation + IMAGE adjacent -->
+                <div class="row g-4 mb-4 align-items-center">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Beispielrechnung für Ihren Führerschein</h5>
+                    <p>Angenommen, Sie benötigen 12 Übungsfahrten und 5 Sonderfahrten. Die Preise können je nach Fahrschule variieren. Eine typische Berechnung:</p>
+                    <ul class="mb-0">
+                        <li>Grundbetrag + Lernmaterial: ca. 430–620&nbsp;€</li>
+                        <li>12 × Übungsfahrten (85&nbsp;€/Stunde): ca. 1.020&nbsp;€</li>
+                        <li>5 × Sonderfahrten (95&nbsp;€/Stunde): ca. 475&nbsp;€</li>
+                        <li>Prüfungen + Vorstellung: ca. 375–544&nbsp;€</li>
+                        <li>Erste Hilfe, Sehtest, Fotos, Ausstellung: ca. 85–160&nbsp;€</li>
+                        <li>Unsere Experten bringen Ihnen im Handumdrehen das Autofahren bei und übernehmen gegen Aufpreis die Prüfungen für Sie</li>
+                    </ul>
+                    <p class="mt-3 mb-0"><strong>Gesamtkosten:</strong> ca. <strong>2.400–3.300&nbsp;€</strong>. Dies kann je nach Fahrstundenbedarf und Region variieren.</p>
+                    </div>
+                </div>
+
+                <!-- IMAGE ADJACENT TO SECOND DIV -->
+                <div class="col-md-6">
+                    <img src="img/was-kostet-der-führerschein.jpg" alt="Beispielrechnung Führerschein Deutschland" class="img-fluid rounded shadow-sm w-100">
+                </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Ungültiger Ausländischer Führerschein</h5>
+                    <p>Die notwendige Umschreibung ist ein häufiges Ärgernis für Ausländer, die nach Deutschland gekommen sind:  Plötzlich dürfen sie mit ihrem bisherigen Führerschein, der im Heimatland noch voll gültig war, in Deutschland kein Fahrzeug mehr führen. Hier kommen wir ins Spiel! Wir bieten Ihnen die einzigartige Möglichkeit, Ihren Führerschein aus dem Ausland in einen gültigen EU-Führerschein umzuwandeln, der Ihnen dann das legale Fahren in Europa erlaubt.</p>
+                    <p><strong style="color:black;">Wie funktioniert das?</strong> Wir nutzen das EU-Recht, denn – wie oben erwähnt – sind Führerscheine aus anderen EU-Ländern in der gesamten Europäischen Union rechtlich anerkannt. Wird Ihr ausländischer Führerschein in Europa nicht anerkannt, wandeln wir ihn in einen gültigen polnischen EU-Führerschein um. Damit können Sie wieder in der EU fahren – mit einem vollwertigen Dokument. Rufen Sie uns jetzt an: Bei uns haben Sie die Möglichkeit, Ihren ausländischen Führerschein umzuschreiben. Dieser Service gilt für alle Klassen und Führerscheine aus über 60 Ländern.
+                    </p>
+                    <p>Bitte beachten Sie: Wenn Ihr EU-Führerschein in Deutschland vor dem 19. Januar 2013 ausgestellt wurde,  müssen Sie diesen bei Ihrer örtlichen Führerscheinstelle umtauschen oder umschreiben lassen. Das letztmögliche Umtauschdatum hängt vom Ausstellungsdatum ab.
+
+                    </p> 
+                        <strong style="color:black;">Beispiel:</strong> Wurde das Dokument 2003 oder 2004 ausgestellt, muss Ihr alter Führerschein bis spätestens 19. Januar 2027 umgetauscht werden.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Hier noch einige Besonderheiten</h5>
+                    <p>Besorgen Sie sich in Deutschland einen internationalen Führerschein. Reisen aus dem Vereinigten Königreich: bei der Post. Reisen aus den USA: bei der AAA oder AATA oder Sie können den Antrag per Post stellen. Reisen aus Kanada: bei einem CAA-Reisezentrum,5 einer Kfz-Zulassungsstelle (wie der SAAQ) oder einer kanadischen Botschaft oder einem kanadischen Konsulat.
+                    </p>
+                    <ul>
+                    <li>Ältere Führerscheine (EU-, DDR-, rosa oder grauer Führerschein) müssen übrigens bis spätestens 19. Januar 2033 umgetauscht werden. Hintergrund: Bis zum Jahr 2033 plant die EU eine vollständige Umstellung auf den einheitlichen EU-Kartenführerschein. Der Umtausch Ihres alten Führerscheins wird dann aber erst tatsächlich im Jahr 2033 verpflichtend.</li>
+                    <li>Ein zweiter Faktor, der Einfluss auf die EU-Führerschein-Gültigkeit haben kann, ist eine Sperrfrist in Deutschland. Sollte eine solche gegen Sie vorliegen, ist kein anderes EU-Land berechtigt, Ihnen einen Führerschein auszustellen. Sobald sie aber abgelaufen ist, kann der Weg zu Ihrer neuen Mobilität beginnen. (Die Dauer der Sperrfrist kann aber durchaus für Ihren Wohnsitz-Antrag genutzt werden. Sprechen Sie uns an!). </li>
+                    <li>Führerscheine der Klassen C1 und C1E (Lkw) sind nur bis zur Vollendung des 50. Lebensjahres des Inhabers gültig. Eine Verlängerung erfordert die entsprechende Umschreibung des alten Führerscheins. Außerdem muss sich der Fahrer alle fünf Jahre einer ärztlichen Untersuchung unterziehen, um seine Eignung zum Führen von Fahrzeugen der Klassen ab 3.500 kg festzustellen.</li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+
+        <!--Kosten End -->
+
+
+        <!-- Blurbs Start -->
+         
+        <div class="container my-5">
+        <div class="text-center py-5">
+            <h2>Führerschein Kategorien</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/zweirad-fuhrerscheine.jpg" alt="Zweirad Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Zweirad Führerscheine</h4>
+                <p>Freude pur: Genieße den Spaß auf zwei Rädern. Bei uns erhältst Du das Ticket für grenzenloses Fahrvergnügen.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/auto-fuhrerscheine.jpg" alt="Auto Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Auto Führerscheine</h4>
+                <p>Steig ein: Wir machen Dich fit für die große Freiheit. Bald entscheidest Du, wann und wo es hingeht.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/lkw-bus-fuhrerscheine.jpg" alt="Lkw / Bus Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Lkw / Bus Führerscheine</h4>
+                <p>Vorfahrt für Deine berufliche Zukunft: Ob mit dem Bus oder „auf dem Bock“, wir machen den Weg frei.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Blurbs End -->
+
+         
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
+                            <img src="img/fahrprüfung-und-fahrprüfer.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">Anforderungen</h1>
+                        <h5 class="section-about-title pe-3">Körperliche und geistige Tauglichkeit</h5>
+                        <p class="mb-4">Bevor die zuständigen Behörden Ihnen einen Führerschein aushändigen, prüfen sie Ihre Fahrtauglichkeit. Unter Umständen ist bei jeder Verlängerung der Fahrerlaubnis oder ab einem gewissen Alter eine ärztliche Untersuchung vorgeschrieben. Lkw- und Busfahrer müssen alle fünf Jahre zur ärztlichen Kontrolle.</p>
+                        <h5 class="section-about-title pe-3">Fahrprüfung und Fahrprüfer</h5>
+                        <p class="mb-4">Sie müssen den Führerschein in dem Land beantragen, in dem Sie gewöhnlich oder regelmäßig leben. In der Regel handelt es sich hierbei um das Land, in dem Sie aufgrund persönlicher oder beruflicher Bindungen mindestens 185 Tage im Kalenderjahr leben. Es gibt <strong>keine EU-weiten Vorschriften</strong> zur Fahrerausbildung, zu Fahrschulen oder zu Fahrlehrern. Es gibt jedoch <strong>EU-Mindeststandards</strong> für:</p>
+                        <ul>
+                            <li>die <strong>Fahrprüfung</strong> – Sie müssen eine theoretische und eine praktische Prüfung ablegen.</li>
+                            <li>die <strong>Fahrprüfer</strong> – Sie müssen eine entsprechende Schulung erfolgreich durchlaufen und regelmäßig an Qualitätssicherungs- und Fortbildungsmaßnahmen teilnehmen .</li>
+                        </ul>
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mopeds, Klasse AM</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Motorräder, Klasse A1, A2</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kraftfahrzeuge, Klasse B, BE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mittelschwere Fahrzeuge, Klasse C1, C1E</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Schwere Krafträder, Klasse A</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Große Fahrzeuge, Klasse C, CE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Minibusse, Klasse D1, D1E</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Busse, Klasse D, DE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Travel Guide Start -->
+        <div class="container-fluid guide py-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Travel Guide</h5>
+                    <h1 class="mb-0">Lernen Sie unsere Fahrer kennen</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-leonie-schwarz.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Leonie Schwarz</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-moritz-schuster.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Moritz Schuster</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-gisela-franke.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Gisela Franke</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-lukas-schneider.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Lukas Schneider</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Travel Guide End -->
+
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Subscribe</h5>
+                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    </p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- Load jQuery locally -->
+        <script src="js/jquery.min.js"></script>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

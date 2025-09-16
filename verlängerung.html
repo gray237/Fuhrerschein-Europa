@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Führerschein Europa - Führerscheinverlängerung in einem anderen EU-Land</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                    <!-- JS will populate this based on login status -->
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <a href="mpu.html" class="nav-item nav-link">MPU</a>
+                        <a href="pakete.html" class="nav-item nav-link">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">Führerscheinverlängerung</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                    <li class="breadcrumb-item"><a href="leistungen.html">Leistungen</a></li>
+                    <li class="breadcrumb-item active text-white">Verlängerung</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div>
+                            <img src="img/eu-führerschein-gültigkeit.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">EU-Führerschein Abgelaufen - <span class="text-primary">Was Nun?</span></h1>
+                        <p class="mb-4">Im Verkehrsrecht kam es 2013 zu einer Anpassung der Gültigkeitsdauer: EU-Führerscheine laufen ab und müssen erneuert werden. Das betrifft nicht nur Führerscheine aus anderen europäischen Ländern. Auch ein in Deutschland ausgestellter normaler Führerschein ist ein EU-Führerschein und daher nur zeitlich begrenzt gültig. Der Ablauf der Erneuerung ist jedoch bereits geklärt und die notwendigen Verwaltungsschritte bekannt.</p>
+                        <p class="mb-4">Doch was passiert, wenn Ihr EU-Führerschein, den Sie in Tschechien oder Polen erworben haben (etwa um die MPU zu vermeiden), abgelaufen ist? Wir haben erfahrene Partner, die Sie bei der Verlängerung Ihres EU-Führerscheins unterstützen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Kosten Start -->
+         
+        <div id="fuehrerschein-kosten-de" class="kosten py-5">
+            <div class="container">
+                <!-- FIRST DIV: Intro -->
+                <header class="mb-4">
+                <h2 class="mb-2">Ablauf EU-Führerschein: Welche Rechtsgrundlage liegt vor?</h2>
+                <p class="lead mb-0">
+                    Das Ablaufen der EU-Führerscheine basiert auf einer Gesetzesänderung im Verkehrsrecht aus dem Jahr 2013. Diese besagt, dass alle Führerscheine, die nach dem 19.01. dieses Jahres ausgestellt wurden, nur noch über eine Gültigkeit von 10 – 15 Jahren verfügen. Hierbei geht es in erster Linie darum, diese Dokumente anders als bisher mit einem aktuellen Lichtbild zu versehen und somit die Identifizierung des Besitzers zu erleichtern. 
+                </p>
+                </header>
+
+                <!-- SECOND DIV (Cost Tables) -->
+                <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">EU-Führerschein verlängern leicht gemacht</h5>
+                    <p>
+                        Wenn Ihr in Deutschland ausgestellter EU-Führerschein abgelaufen ist, gehen Sie einfach zur Führerschein-Behörde, reichen ein aktuelles Foto ein und erhalten nach einer entsprechenden Bearbeitungszeit Ihr erneuertes Dokument. Doch was, wenn Sie Ihre Fahrerlaubnis im EU-Ausland gemacht haben? – Damals hatten Sie vermutlich eine Agentur wie unsere an Ihrer Seite, die Sie in Polen, Tschechien oder Ungarn bei allen notwendigen Schritten für Ihren EU-FS begleitet hat. Und nun suchen Sie vielleicht wieder nach einer solchen Unterstützung, wenn Sie Ihren EU-Führerschein verlängern lassen möchten. – Rufen Sie uns an und nutzen Sie unseren Top-Service für Ihre EU-Führerschein-Verlängerung!
+                    </p>
+                    
+                    <!-- IMAGE BELOW FIRST DIV -->
+                        <div class="p-4">
+                        <img src="img/führerschein-umtauschen.jpg" alt="Führerschein Kosten Überblick" class="img-fluid rounded shadow-sm w-100">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">EU-Führerschein abgelaufen: Was ist zu tun?</h5>
+                    <p>Die Verlängerung Ihres abgelaufenen EU-Führerscheins ist schnell und einfach. Sie reisen lediglich zweimal in das Ausstellungsland Ihres Führerscheins, den Rest erledigen wir für Sie. (Auf Wunsch ist auch die Umschreibung Ihres EU-Führerscheins in einen ausländischen Führerschein möglich. Sprechen Sie uns einfach an, wir erläutern Ihnen gerne die Möglichkeiten.)</p>
+                    <p>Bei beiden Reisen kümmern wir uns um die Einholung einer gültigen Aufenthaltserlaubnis und die Überprüfung Ihres Wohnsitzes nach dem Residenzprinzip bzw. der 185-Tage-Regelung. Außerdem benötigen Sie ein neues Foto und ein ärztliches Attest über Ihre Fahrtauglichkeit. Detaillierte Informationen zur Verlängerung Ihres EU-Führerscheins finden Sie auf unserer Website.
+                    </p>
+                    <p>Wenn Sie in ein anderes EU-Land ziehen und Ihr Führerschein abläuft, müssen Sie ihn dort verlängern lassen, sofern Sie dort Ihren gewöhnlichen Wohnsitz haben.
+                    </p>
+                    <p>Unabhängig davon, ob Ihr alter Führerschein das alte oder das neue Format aufweist, erhalten Sie bei der Verlängerung das neue Standardformat (Plastikkarte in Kreditkartengröße mit Foto). Möglicherweise hat Ihr neuer Führerschein eine andere Gültigkeitsdauer als der alte und unterliegt in Ihrem neuen Wohnsitzland Einschränkungen oder besonderen Bedingungen.
+                    </p>
+                    <p>Wurde Ihre Fahrerlaubnis in dem EU-Land, in dem sie erteilt wurde, ausgesetzt, eingeschränkt, entzogen oder aufgehoben, können Sie Ihren Führerschein nicht verlängern. Wenn Ihr Führerschein verloren geht oder gestohlen wird, müssen Sie vor Ort einen neuen beantragen. Hier erfahren Sie, was bei Diebstahl oder Verlust Ihres Führerscheins im Ausland zu tun ist.
+                    </p>
+                    
+                    </div>
+                </div>
+                </div>
+
+                <!-- THIRD DIV: Example calculation + IMAGE adjacent -->
+                <div class="row g-4 mb-4 align-items-center">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Unser Service für Sie im Überblick</h5>
+                    <ul>
+                        <li>Nutzen Sie unser umfangreiches Wissen rund um den EU-Führerschein und alle aktuellen Urteile zum Thema für Ihre Verlängerung.</li>
+                        <li>Reisen Sie nur maximal zweimal an und überlassen Sie den Rest uns!</li>
+                        <li>Das Verlängern Ihrer Fahrerlaubnis nimmt nur 2 Monate in Anspruch.</li>
+                        <li>Wir bieten Ihnen unseren Top-Service zu einem unschlagbar günstigen Preis.</li>
+                    </ul>
+                    <p class="mt-3 mb-0">Von der ersten Anmeldung, über alle notwendigen Termine vor Ort, bis zum Erhalt Ihrer offiziellen Papiere sind alle notwendigen Abläufe stressfrei und planungssicher für Sie organisiert.</p>
+                    </div>
+                </div>
+
+                <!-- IMAGE ADJACENT TO THIRD DIV -->
+                <div class="col-md-6">
+                    <img src="img/Fahrberechtigung.jpg" alt="Beispielrechnung Führerschein Deutschland" class="img-fluid rounded shadow-sm w-100">
+                </div>
+                </div>
+
+                <!-- Quellen -->
+                <div class="mt-5">
+                <h6>Quellen (Auswahl)</h6>
+                <ul class="small">
+                    <li>ADAC: <a href="https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/fuehrerschein-kosten/" target="_blank" rel="noopener">Führerschein Kosten (Klasse B)</a></li>
+                    <li>TÜV SÜD: <a href="https://www.tuvsud.com/de-de/branchen/mobilitaet-und-automotive/fuehrerschein-und-pruefung/fuehrerschein-und-pruefung/rund-um-die-fuehrerscheinpruefung/gebuehren" target="_blank" rel="noopener">Prüfungsgebühren</a></li>
+                    <li>Erste Hilfe Kurse: <a href="https://www.erstehilfe.de/kurs/buchen" target="_blank" rel="noopener">erstehilfe.de</a></li>
+                </ul>
+                <p class="small text-muted mb-0">Stand: 2025; Preise können je nach Region und Fahrschule variieren.</p>
+                </div>
+            </div>
+            </div>
+
+
+        <!--Kosten End -->
+
+        <!--Banner Start-->
+
+        <div class="banner-section">
+            <img src="img/fahrschule-in-berlin.jpg" alt="Banner" class="banner-img">
+
+            <!-- Overlay text -->
+            <div class="banner-text">Deutsch Führerschein Machen</div>
+
+            <!-- Overlay button -->
+            <a href="#" class="btn btn-primary rounded-pill banner-btn">Jetzt Entdecken</a>
+        </div>
+
+        <!--Banner End-->
+
+
+         <!-- Blurbs Start -->
+
+        
+        <div class="container my-5">
+            <div class="text-center py-5">
+                <h2>Dein Führerschein - Von Leicht Bis Schwer</h2>
+            </div>
+            <div class="row text-center">
+                <!-- Column 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                <img src="img/zweirad-fuhrerscheine.jpg" alt="Step 1" class="mb-3 img-fluid">
+                <h4 class="mb-2">Zweirad Führerscheine</h4>
+                <p>
+                    Freude pur: Genieße den Spaß auf zwei Rädern. Bei uns erhältst Du das Ticket für grenzenloses Fahrvergnügen.
+                </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                <img src="img/auto-fuhrerscheine.jpg" alt="Step 2" class="mb-3 img-fluid">
+                <h4 class="mb-2">Auto Führerscheine</h4>
+                <p>
+                    Steig ein: Wir machen Dich fit für die große Freiheit. Bald entscheidest Du, wann und wo es hingeht.
+                </p>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                <img src="img/lkw-bus-fuhrerscheine.jpg" alt="Step 3" class="mb-3 img-fluid">
+                <h4 class="mb-2">Lkw / Bus Führerscheine</h4>
+                <p>
+                    Vorfahrt für Deine berufliche Zukunft: Ob mit dem Bus oder „auf dem Bock“, wir machen den Weg frei.
+                </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Blurbs End -->
+
+        <!-- Faq Start -->
+
+        <div class="container-fluid faq">
+            <div class="container py-5">
+            <div class="row">
+                   <!-- LEFT COLUMN -->
+                    <div class="col-lg-6 text-start">
+                        <h3 class="mb-3">Staatsanwaltschaft muss Wohnsitzverstoß belegen</h3>
+                        <p>
+                            Für etwaige Gerichtsverhandlungen ist daher zu beachten, dass Betroffener keinerlei Äußerungen zur Einhaltung des Wohnsitzerfordernisses treffen sollten. Die Staatsanwaltschaft bzw. Verwaltungsbehörde müsste aufgrund „unbestreitbarer Tatsachen aus dem Ausstellerstaat” den Nachweis erbringen, dass der Wohnsitz nicht im Ausstellerstaat bestanden hat, bevor es zum Erwerb der Fahrerlaubnis kam. Lediglich wenn eine Mitteilung des Ausstellermitgliedsstaates vorliegt, nach der sich der deutsche Staatsangehörige im zeitlichen Zusammenhang mit der Erlangung des EU-Führerscheins nicht mindestens 185 Tage im Ausstellermitgliedsstaat aufgehalten hat, muss die Fahrerlaubnis nicht anerkannt werden. Erst mit dem eindeutigen Hinweis durch den Führerschein-Aussteller-Staat, dass gegen die 185-Tage-Regelung verstoßen wurde, kann die Gültigkeit des Führerscheins angezweifelt werden.
+                        </p>
+                        <h5>Unser Partner:</h5>
+                        <div class="partner-images">
+                            <img src="img/verkehrswacht.jpg" alt="Verkehrswacht Rottweil">
+                            <img src="img/adac_wuerttemberg_logo.jpg" alt="ADAC Württemberg">
+                        </div>
+                    </div>
+
+
+                    <!-- RIGHT COLUMN (ACCORDION) -->
+                    <div class="col-lg-6">
+                        <div class="accordion" id="travelAccordion">
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Wie erhalte ich einen deutschen Führerschein?
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wenn Sie zum ersten Mal einen Führerschein beantragen möchten, müssen Sie Folgendes tun:</p>
+                                <ul>
+                                    <li>Melden Sie sich bei unserer Fahrschule an. Unsere professionellen Fahrlehrer sprechen Deutsch, Englisch, Spanisch, Französisch oder Arabisch.</li>
+                                    <li>Nehmen Sie an einem Erste-Hilfe-Kurs teil. Kurse finden Sie in Ihrer Nähe bei <a href="https://www.asb.de/unsere-angebote/erste-hilfe">ASB</a> oder <a href="https://www.johanniter.de/dienste-leistungen/medizinische-hilfe/erste-hilfe/erste-hilfe-kurse-fuer-privatpersonen/">Johannitern</a>.</li>
+                                    <li>Lassen Sie Ihre Augen von einem Optiker oder Augenarzt untersuchen (Sehtest). Der Sehtest kostet etwa 7 €. Einige Optiker bieten auch kostenlose Sehtests an. Auch einige Erste-Hilfe-Kurse bieten kostenlose Sehtests an.</li>
+                                    <li>Machen Sie ein biometrisches Passfoto</li>
+
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Wie sieht eine praktische Fahrprüfung aus?
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wenn du die Theorieprüfung bestanden hast, kannst du die Fahrprüfung ablegen. Diese dauert in der Regel 50 bis 60 Minuten. In dieser Zeit musst du deine Fähigkeiten in vorgegebenen Fahrsituationen (Kreisverkehre, Autobahnen usw.) unter Beweis stellen. Der Prüfer sitzt in der Regel auf dem Rücksitz und beurteilt deine Fahrweise hinsichtlich Sicherheit, Kompetenz und Ruhe. Dein Fahrlehrer sitzt neben dir und übernimmt im Notfall die Kontrolle.</p>
+                                <p>Wir wünschen dir viel Erfolg! Solltest du die Prüfung nicht beim ersten Versuch bestehen, kannst du sie nach zwei Wochen wiederholen. Die Anzahl der Wiederholungen ist unbegrenzt.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Wie viel kostet der Erwerb eines deutschen Führerscheins?
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Der Führerschein kostet insgesamt zwischen 2.600 und 3.500 Euro. Der Preis hängt von der Anzahl der Fahrstunden ab. In Ostdeutschland ist der Führerschein im Durchschnitt günstiger als in Westdeutschland. Die Kosten für Theorie- und Fahrstunden machen den größten Teil der Summe aus. Ob Theorieunterricht erforderlich ist, hängt von verschiedenen Faktoren ab. Manche Fahrstunden sind für Fahranfänger obligatorisch (z. B. Autobahn-, Nacht- oder Überlandfahrten).
+                                </p>
+                                <p>Die Anzahl der benötigten Fahrstunden bestimmt Ihr Fahrlehrer. Erst wenn Ihr Fahrlehrer überzeugt ist, dass Sie sicher fahren können, können Sie sich zur Fahrprüfung anmelden. Die Preise für Fahrstunden sind bei jeder Fahrschule unterschiedlich. Im Vergleich zu den Kosten für die Fahrstunden selbst fallen die Gebühren für die Theorie- und Fahrprüfung nicht ins Gewicht. Die Preise für die Fahrprüfung in Bayern und Baden-Württemberg finden Sie beispielsweise auf <a href="https://www.tuvsud.com/de-de/branchen/mobilitaet-und-automotive/fuehrerschein-und-pruefung/fuehrerschein-und-pruefung/rund-um-die-fuehrerscheinpruefung/gebuehren"> www.tuev-sued.de.</a> Die theoretische Prüfung kostet ca. 25 €. Die praktische Prüfung kostet ca. 120 €.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Faq End -->
+         
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
+                            <img src="img/fahrprüfung-und-fahrprüfer.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">Anforderungen</h1>
+                        <h5 class="section-about-title pe-3">Körperliche und geistige Tauglichkeit</h5>
+                        <p class="mb-4">Bevor die zuständigen Behörden Ihnen einen Führerschein aushändigen, prüfen sie Ihre Fahrtauglichkeit. Unter Umständen ist bei jeder Verlängerung der Fahrerlaubnis oder ab einem gewissen Alter eine ärztliche Untersuchung vorgeschrieben. Lkw- und Busfahrer müssen alle fünf Jahre zur ärztlichen Kontrolle.</p>
+                        <h5 class="section-about-title pe-3">Fahrprüfung und Fahrprüfer</h5>
+                        <p class="mb-4">Sie müssen den Führerschein in dem Land beantragen, in dem Sie gewöhnlich oder regelmäßig leben. In der Regel handelt es sich hierbei um das Land, in dem Sie aufgrund persönlicher oder beruflicher Bindungen mindestens 185 Tage im Kalenderjahr leben. Es gibt <strong>keine EU-weiten Vorschriften</strong> zur Fahrerausbildung, zu Fahrschulen oder zu Fahrlehrern. Es gibt jedoch <strong>EU-Mindeststandards</strong> für:</p>
+                        <ul>
+                            <li>die <strong>Fahrprüfung</strong> – Sie müssen eine theoretische und eine praktische Prüfung ablegen.</li>
+                            <li>die <strong>Fahrprüfer</strong> – Sie müssen eine entsprechende Schulung erfolgreich durchlaufen und regelmäßig an Qualitätssicherungs- und Fortbildungsmaßnahmen teilnehmen .</li>
+                        </ul>
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mopeds, Klasse AM</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Motorräder, Klasse A1, A2</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kraftfahrzeuge, Klasse B, BE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mittelschwere Fahrzeuge, Klasse C1, C1E</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Schwere Krafträder, Klasse A</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Große Fahrzeuge, Klasse C, CE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Minibusse, Klasse D1, D1E</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Busse, Klasse D, DE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Travel Guide Start -->
+        <div class="container-fluid guide py-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Travel Guide</h5>
+                    <h1 class="mb-0">Lernen Sie unsere Fahrer kennen</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-leonie-schwarz.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Leonie Schwarz</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-moritz-schuster.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Moritz Schuster</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-gisela-franke.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Gisela Franke</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-lukas-schneider.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Lukas Schneider</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Travel Guide End -->
+
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Subscribe</h5>
+                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    </p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- Load jQuery locally -->
+        <script src="js/jquery.min.js"></script>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

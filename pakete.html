@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Führerschein Europa - Fahrschulkurspakete und Unterricht</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                    <!-- JS will populate this based on login status -->
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <a href="mpu.html" class="nav-item nav-link">MPU</a>
+                        <a href="pakete.html" class="nav-item nav-link active">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">Fahrschul-Kurspakete</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                    <li class="breadcrumb-item"><a href="leistungen.html">Leistungen</a></li>
+                    <li class="breadcrumb-item active text-white">Pakete</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Packages Start -->
+        <div class="container-fluid packages py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Was wir bieten</h5>
+                    <h1 class="mb-0">Führerscheinpakete Kaufen</h1>
+                </div>
+                <div class="packages-carousel owl-carousel">
+                    <div class="packages-item">
+                        <div class="packages-img">
+                            <img src="img/neuer-treiber-anahit-asatryan.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>DE - PL - HU - CZ</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>1-3 Monate</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>26 Fahrstunden</small>
+                            </div>
+                            <div class="packages-price py-2 px-4">320 €</div>
+                        </div>
+                        <div class="packages-content bg-light">
+                            <div class="p-4 pb-0">
+                                <h5 class="mb-0">Fahrschulprüfung Ablegen</h5>
+                                <small class="text-uppercase">Vollständiger Fahrkurs</small>
+                                <div class="mb-3">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                                <p class="mb-4">Der Prozess umfasst obligatorischen theoretischen Unterricht, praktische Fahrstunden und das Bestehen sowohl der theoretischen als auch der praktischen Prüfung.</p>
+                            </div>
+                            <div class="row bg-primary rounded-bottom mx-0">
+                                <div class="col-6 text-start px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                </div>
+                                <div class="col-6 text-end px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="packages-item">
+                        <div class="packages-img">
+                            <img src="img/mieten-sie-einen-fahrer.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>DE - PL - HU - CZ</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>15 Tage</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>26 Fahrstunden</small>
+                            </div>
+                            <div class="packages-price py-2 px-4">550 €</div>
+                        </div>
+                        <div class="packages-content bg-light">
+                            <div class="p-4 pb-0">
+                                <h5 class="mb-0">Überspringen Sie die Fahrprüfung</h5>
+                                <small class="text-uppercase">Praktischer Test</small>
+                                <div class="mb-3">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                                <p class="mb-4">Mieten Sie einen professionellen Fahrer, um Ihre Fahrschulprüfung zu bestehen, oder mieten Sie einen Reiseleiter, der Sie durch Deutschland und den Schengen-Raum führt</p>
+                            </div>
+                            <div class="row bg-primary rounded-bottom mx-0">
+                                <div class="col-6 text-start px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                </div>
+                                <div class="col-6 text-end px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="packages-item">
+                        <div class="packages-img">
+                            <img src="img/virtuelles-fahrschulprogramm.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Online-Fahrschule</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 Tage</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>12 Fahrstunden</small>
+                            </div>
+                            <div class="packages-price py-2 px-4">180 €</div>
+                        </div>
+                        <div class="packages-content bg-light">
+                            <div class="p-4 pb-0">
+                                <h5 class="mb-0">Virtueller Fahrprüfungssimulator</h5>
+                                <small class="text-uppercase">Virtueller 360°-Fahrtest</small>
+                                <div class="mb-3">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                                <p class="mb-4">Üben Sie Ihr praktisches Fahren in realistischen Umgebungen des Online-Fahrsimulators, die auf echten deutschen Straßen basieren, und erlernen Sie echte Fahrfähigkeiten.</p>
+                            </div>
+                            <div class="row bg-primary rounded-bottom mx-0">
+                                <div class="col-6 text-start px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                </div>
+                                <div class="col-6 text-end px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="packages-item">
+                        <div class="packages-img">
+                            <img src="img/einblicke-in-die-mpu.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>DE - PL - HU - CZ</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="far fa-clock me-2"></i>4 Stunden</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>MPU-Begutachtung</small>
+                            </div>
+                            <div class="packages-price py-2 px-4">350 €</div>
+                        </div>
+                        <div class="packages-content bg-light">
+                            <div class="p-4 pb-0">
+                                <h5 class="mb-0">MPU-Verfahren 2025: Idiotentest</h5>
+                                <small class="text-uppercase">Drogen-/Alkoholscreening</small>
+                                <div class="mb-3">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                                <p class="mb-4">Dazu gehören medizinische Tests, ein psychologisches Interview und computergestützte Bewertungen der kognitiven Fähigkeiten, der Aufmerksamkeit und der Reaktionszeit</p>
+                            </div>
+                            <div class="row bg-primary rounded-bottom mx-0">
+                                <div class="col-6 text-start px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                </div>
+                                <div class="col-6 text-end px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="packages-item">
+                        <div class="packages-img">
+                            <img src="img/ein-auto-in-europa-mieten.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Schengen-Raum</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>Tagesmiete</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>1-5 Personen</small>
+                            </div>
+                            <div class="packages-price py-2 px-4">69 €</div>
+                        </div>
+                        <div class="packages-content bg-light">
+                            <div class="p-4 pb-0">
+                                <h5 class="mb-0">Mieten Sie Kleinwagen und Familienautos</h5>
+                                <small class="text-uppercase">Bestpreisgarantie</small>
+                                <div class="mb-3">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                                <p class="mb-4">Mieten Sie Kleinwagen und Familienautos mit KOSTENLOSER Abholung an über 1.000 Standorten in ganz Europa. Finden Sie noch heute die besten Mietwagenpreise online!</p>
+                            </div>
+                            <div class="row bg-primary rounded-bottom mx-0">
+                                <div class="col-6 text-start px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                </div>
+                                <div class="col-6 text-end px-0">
+                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Packages End -->
+
+        <!-- Gallery Start -->
+        <div class="container-fluid gallery py-5 my-5">
+                <div class="mx-auto mb-5 text-center" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Werde Fahrer</h5>
+                    <h1 class="mb-0">Führerscheinprüfung Umgehen</h1>
+                </div>
+            <div class="row g-2">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                                <div class="gallery-item h-100">
+                                    <img src="img/ana-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Führerscheinprüfung Bestehen</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/ana-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-1" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="gallery-item h-100">
+                                    <img src="img/janine-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Express-Führerschein</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/janine-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                                <div class="gallery-item h-100">
+                                    <img src="img/elhame-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Führerscheinprüfung Bestehen</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/elhame-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="gallery-item h-100">
+                                    <img src="img/mikel-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Führerscheinprüfung Bestehen</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/mikel-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-4" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                                <div class="gallery-item h-100">
+                                    <img src="img/jason-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Express-Führerschein</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/jason-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-5" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                                <div class="gallery-item h-100">
+                                    <img src="img/sofia-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Führerscheinprüfung Bestehen</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/sofia-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-6" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                                <div class="gallery-item h-100">
+                                    <img src="img/nilofar-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Express-Führerschein</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/nilofar-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-7" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
+                                <div class="gallery-item h-100">
+                                    <img src="img/majeed-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Express-Führerschein</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/majeed-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-8" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                                <div class="gallery-item h-100">
+                                    <img src="img/emin-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Führerscheinprüfung Bestehen</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/emin-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-9" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
+                                <div class="gallery-item h-100">
+                                    <img src="img/nicoleta-führerscheinprüfung-bestehen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <div class="gallery-content">
+                                        <div class="gallery-info">
+                                            <h5 class="text-white text-uppercase mb-2">Führerscheinprüfung Bestehen</h5>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-plus-icon">
+                                        <a href="img/nicoleta-führerscheinprüfung-bestehen.jpg" data-lightbox="gallery-10" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        <!-- Gallery End -->
+
+        <!-- Tour Booking Start -->
+        <div class="container-fluid booking py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h5 class="section-booking-title pe-3">Autovermietungen</h5>
+                        <h1 class="text-white mb-4">Auto in Europa buchen</h1>
+                        <p class="text-white mb-4">Planen Sie Ihre nächste Reise in Europa? Ob geschäftlich, privat oder einfach für eine zuverlässige Fahrt – bei uns können Sie Ihr Auto ganz unkompliziert online buchen. Wählen Sie aus einer großen Auswahl an Fahrzeugen – von kompakten Stadtautos bis hin zu Luxuslimousinen und Familienvans. Genießen Sie transparente Preise, keine versteckten Gebühren und umfassenden Kundenservice.
+                        </p>
+                        <ul class="text-white">
+                            <li><strong>Standort wählen:</strong> Abholung und Rückgabe an Flughäfen, Bahnhöfen oder Stadtzentren in ganz Europa.</li>
+                            <li><strong>Auto auswählen:</strong> Economy, Premium, SUV oder Van – wir haben das passende Fahrzeug für jede Reise.</li>
+                            <li><strong>Daten festlegen:</strong> Flexible Tages-, Wochen- oder Monatsmieten passend zu Ihrem Reiseplan.</li>
+                            <li><strong>Buchung bestätigen:</strong> Sichere Online-Zahlung und sofortige Bestätigung.</li>
+                        </ul>
+                        <a href="kontakt.html" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Kontaktieren Sie uns</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-white mb-4">Geben Sie einfach Ihre Reisedaten im Formular unten ein und <span class="text-warning">reservieren Sie Ihr Auto noch heute.</span>  Fahren Sie mit dem guten Gefühl, dass Ihre Buchung gesichert ist und Ihr Fahrzeug bei Ankunft bereitsteht.</p>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-white border-0" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating date" id="date3" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-white border-0" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <label for="datetime">Date & Time</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select bg-white border-0" id="select1">
+                                            <option value="1">Destination 1</option>
+                                            <option value="2">Destination 2</option>
+                                            <option value="3">Destination 3</option>
+                                        </select>
+                                        <label for="select1">Destination</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select bg-white border-0" id="SelectPerson">
+                                            <option value="1">Persons 1</option>
+                                            <option value="2">Persons 2</option>
+                                            <option value="3">Persons 3</option>
+                                        </select>
+                                        <label for="SelectPerson">Persons</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select bg-white border-0" id="CategoriesSelect">
+                                            <option value="1">Kids</option>
+                                            <option value="2">1</option>
+                                            <option value="3">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <label for="CategoriesSelect">Categories</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control bg-white border-0" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <label for="message">Special Request</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tour Booking End -->
+
+        <!-- Travel Guide Start -->
+        <div class="container-fluid guide py-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Travel Guide</h5>
+                    <h1 class="mb-0">Lernen Sie unsere Fahrer kennen</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-leonie-schwarz.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Leonie Schwarz</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-moritz-schuster.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Moritz Schuster</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-gisela-franke.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Gisela Franke</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-lukas-schneider.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Lukas Schneider</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Travel Guide End -->
+        
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Subscribe</h5>
+                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    </p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- Load jQuery locally -->
+        <script src="js/jquery.min.js"></script>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

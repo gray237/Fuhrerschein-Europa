@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kontoverwaltung – Fahrschul-Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Optional additional styling */
+        .account-card {
+            margin-bottom: 20px;
+        }
+
+        .account-header {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar & Navbar (reuse from dashboard) -->
+    <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="#"><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                <!-- JS will populate this based on login status -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <a href="mpu.html" class="nav-item nav-link">MPU</a>
+                        <a href="pakete.html" class="nav-item nav-link">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+    <!-- Page Header -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4">Account Management</h3>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                <li class="breadcrumb-item"><a href="armaturenbrett.html">Dashboard</a></li>
+                <li class="breadcrumb-item active text-white">Account Management</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Account Management Content -->
+    <div class="container py-5">
+        <div class="account-header text-center">
+            <h1>Manage Your Account</h1>
+            <p>Update your information and preferences below.</p>
+        </div>
+
+        <div class="row">
+            <!-- Personal Info -->
+            <div class="col-lg-6">
+                <div class="card account-card p-4">
+                    <h5>Personal Information</h5>
+                    <form id="accountForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Information</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Password Management -->
+            <div class="col-lg-6">
+                <div class="card account-card p-4">
+                    <h5>Change Password</h5>
+                    <form id="passwordForm">
+                        <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Current Password</label>
+                            <input type="password" class="form-control" id="currentPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Change Password</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="col-lg-12">
+                <div class="card account-card p-4">
+                    <h5>Preferences & Settings</h5>
+                    <form id="settingsForm">
+                        <div class="mb-3">
+                            <label for="language" class="form-label">Language</label>
+                            <select id="language" class="form-select">
+                                <option value="en">English</option>
+                                <option value="de">German</option>
+                                <option value="fr">French</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="notifications" class="form-label">Notifications</label>
+                            <select id="notifications" class="form-select">
+                                <option value="all">All Notifications</option>
+                                <option value="email">Email Only</option>
+                                <option value="sms">SMS Only</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout -->
+        <div class="text-end mt-4">
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/jquery.min.js"></script>
+    
+    <script>
+        // Load user info
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        if (user) {
+            document.getElementById("name").value = user.name;
+            document.getElementById("email").value = user.email;
+            document.getElementById("phone").value = user.phone || "";
+        }
+
+        // Update personal info
+        document.getElementById("accountForm").addEventListener("submit", e => {
+            e.preventDefault();
+            user.name = document.getElementById("name").value;
+            user.email = document.getElementById("email").value;
+            user.phone = document.getElementById("phone").value;
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+            alert("Personal information updated!");
+        });
+
+        // Change password
+        document.getElementById("passwordForm").addEventListener("submit", e => {
+            e.preventDefault();
+            const current = document.getElementById("currentPassword").value;
+            const newPass = document.getElementById("newPassword").value;
+            const confirm = document.getElementById("confirmPassword").value;
+            if (current !== user.password) {
+                alert("Current password incorrect!");
+                return;
+            }
+            if (newPass !== confirm) {
+                alert("Passwords do not match!");
+                return;
+            }
+            user.password = newPass;
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+            alert("Password updated successfully!");
+        });
+
+        // Settings
+        document.getElementById("settingsForm").addEventListener("submit", e => {
+            e.preventDefault();
+            user.language = document.getElementById("language").value;
+            user.notifications = document.getElementById("notifications").value;
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+            alert("Settings saved!");
+        });
+    </script>
+</body>
+</html>

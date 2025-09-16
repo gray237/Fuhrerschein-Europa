@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Führerschein Europa - Führerschein ohne MPU (Idiotentest) </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                    <!-- JS will populate this based on login status -->
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>\
+                        <div class="nav-item dropdown">
+                            <a href="mpu.html" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">MPU</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="mpu-verkehr.html" class="dropdown-item">MPU-Verkehr</a>
+                                <a href="mpu-drogen.html" class="dropdown-item">MPU Drogen</a>
+                                <a href="mpu-alkohol.html" class="dropdown-item">MPU Alkohol</a>
+                                <a href="mpu-delikte.html" class="dropdown-item">MPU-Delikte</a>
+                                <a href="sperrfristverkürzung.html" class="dropdown-item">Sperrfristverkürzung</a>
+                                <a href="abstinenznachweis.html" class="dropdown-item">Abstinenznachweis</a>
+                            </div>
+                        </div>
+                        <a href="pakete.html" class="nav-item nav-link">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">MPU Umgehen (Idiotentest)</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                    <li class="breadcrumb-item active text-white">MPU</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div>
+                            <img src="img/führerscheinerwerb-in-deutschland.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">Führerschein ohne MPU <span class="text-primary">So geht’s</span></h1>
+                        <p class="mb-4">Viele unserer Mandanten kontaktieren uns aus fast demselben Grund: Sie möchten die MPU (Medizinisch-Psychologische Untersuchung) vermeiden. Doch die rechtlichen Fragen sind nicht alle eindeutig geklärt. Wie kann man die Pflicht zur medizinisch-psychologischen Untersuchung (kurz: MPU) mithilfe einer Fahrschulvermittlung in Deutschland, Polen, Tschechien oder Ungarn einfach umgehen?</p>
+                        <p class="mb-4">Wir geben Ihnen einen Einblick in die aktuelle europäische Rechtslage, die den Erwerb eines Führerscheins ohne MPU möglich macht. Wenn Sie sich dann entscheiden, mit Hilfe unserer Agentur Ihren EU-Führerschein zu machen und bald wieder legal Auto zu fahren, können Sie sich direkt anmelden und schon bald wieder hinters Steuer steigen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- MPU Reasons Section Start -->
+        <div class="container-fluid blurb py-5">
+            <div class="container py-5 text-center">
+                <div class="mx-auto mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">MPU-Testkategorien</h5>
+                    <h1 class="mb-0">Warum wird ein MPU-Test angeordnet?</h1>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <!-- Item 1 -->
+                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                        <div class="blurb-card h-100 text-center">
+                            <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                                <h5 class="mb-3">MPU-Verkehr</h5>
+                                <p class="mb-3">Wird angeordnet, wenn die Fahrerlaubnis aufgrund wiederholter oder besonders schwerer Verkehrsverstöße entzogen wurde.</p>
+                                <img src="img/Ueberholen-bei-Ueberholverbot.png" class="img-fluid rounded mx-auto" alt="Verkehrsverstöße">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                        <div class="blurb-card h-100 text-center">
+                            <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                                <h5 class="mb-3">MPU Drogen</h5>
+                                <p class="mb-3">Erforderlich, wenn der Führerschein aufgrund von Drogenkonsum oder drogenbedingten Verkehrsverstößen entzogen wurde.</p>
+                                <img src="img/Drogen-Missbrauch-2.png" class="img-fluid rounded mx-auto" alt="Drogen MPU">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                        <div class="blurb-card h-100 text-center">
+                            <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                                <h5 class="mb-3">MPU Alkohol</h5>
+                                <p class="mb-3">Erforderlich, wenn der Führerschein aufgrund von Alkoholmissbrauch oder wiederholtem Fahren unter Alkoholeinfluss entzogen wurde.</p>
+                                <img src="img/MPU-Alkohol.png" class="img-fluid rounded mx-auto" alt="Alkohol MPU">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                        <div class="blurb-card h-100 text-center">
+                            <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                                <h5 class="mb-3">MPU-Delikte</h5>
+                                <p class="mb-3">Eine MPU wird angeordnet, wenn Ihnen aufgrund schwerer Straftaten die Fahrerlaubnis entzogen wurde.</p>
+                                <img src="img/MPU-Strafdaten-3.png" class="img-fluid rounded mx-auto" alt="Straftaten MPU">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                        <div class="blurb-card h-100 text-center">
+                            <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                                <h5 class="mb-3">Sperrfristverkürzung</h5>
+                                <p class="mb-3">Bei einem Entzug der Fahrerlaubnis wird häufig eine Sperrfrist verhängt, während der Sie keinen neuen Führerschein beantragen können.</p>
+                                <img src="img/MPU-Strafdaten.png" class="img-fluid rounded mx-auto" alt="Sperrfrist MPU">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                        <div class="blurb-card h-100 text-center">
+                            <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                                <h5 class="mb-3">Abstinenznachweis</h5>
+                                <p class="mb-3">Wie der Abstinenznachweis bei Alkohol- oder Drogenkonsum funktioniert und worauf Sie achten sollten, um Ihre MPU erfolgreich zu bestehen.</p>
+                                <img src="img/MPU-Alkohol-2.png" class="img-fluid rounded mx-auto" alt="Abstinenznachweis MPU">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- MPU Reasons Section End -->
+
+
+
+        <!-- Kosten Start -->
+         
+        <div id="fuehrerschein-kosten-de" class="py-5 bg-light">
+            <div class="container">
+                <!-- FIRST DIV: Intro -->
+                <header class="mb-4">
+                <h2 class="mb-2">Ihre umfassende MPU -Vorbereitung</h2>
+                <p>Aufgrund der Komplexität der Untersuchung ist es sehr unwahrscheinlich, dass Sie die MPU ohne professionelle Beratung erfolgreich abschließen können. Die Ausfallrate ohne Beratung liegt weit über 50%, auf dem Markt von MPU Preparer gibt es viele schwarze Schafe. Ziegler und Lehnhart (2012) * empfohlen in diesem Zusammenhang einem Go MPU Preparer, der einst als Verkehrspsychologische Bewerter arbeitete, weil Sie hier von dem Fachwissen und dem umfassenden Wissen profitieren können.
+                </p>
+                </header>
+
+                <!-- Second DIV: Example calculation + IMAGE adjacent -->
+                <div class="row g-4 mb-4 align-items-center">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Wie viel kostet die MPU?</h5>
+                    <p>Die MPU -Bewertungskosten überall in Deutschland den gleichen Betrag. Die Kosten werden von der Frage der Handlungshandlungen geleitet. Eine gute Vorbereitung auf diese Hürde sollte immer einzeln auf Sie zugeschnitten werden. Wir prüfen gerne kostenlos und ohne Verpflichtung Ihren Fall und geben Ihnen eine Festpreisverpflichtung, bei der unser Rat zu einem Pauschalpreis stattfindet! Danach gibt es keine weiteren Kosten für die MPU -Beratung.</p>
+                    <p><strong style="color:black">Das bedeutet für Sie:</strong> Fortsetzung der Beratungsmaßnahmen, bis Sie Ihre MPU erfolgreich bestanden haben! Nein IFs und Buts! Kontaktieren Sie uns noch heute! Wir freuen uns auf Sie!</p>
+                    <div class="accordion-button">
+                    Gebührenübersicht (FeV)
+                    </div>
+                    <div class="p-3">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>Alkoholauffällige (§ 13 Nr. 2 FeV)</td>
+                            <td class="text-end">€ 592,62</td>
+                        </tr>
+                        <tr>
+                            <td>Betäubungsmittel- u. Medikamentenauffällige (§ 14 FeV) inkl. Drogenscreening</td>
+                            <td class="text-end">€ 749,70</td>
+                        </tr>
+                        <tr>
+                            <td>körperliche u. geistige Beeinträchtigungen (§ 11 Abs. 3 iVm. Abs. 2 FeV), ausgenommen neurologisch-psychiatrische Beeinträchtigungen</td>
+                            <td class="text-end">€ 511,70</td>
+                        </tr>
+                        <tr>
+                            <td>neurologisch-psychiatrische Beeinträchtigungen (§ 11 Abs. 3 iVm. Abs. 2 FeV)</td>
+                            <td class="text-end">€ 531,93</td>
+                        </tr>
+                        <tr>
+                            <td>Auffälligkeiten bei der Fahrerlaubnisprüfung (§ 11 Abs. 3 Nr. 3 FeV)</td>
+                            <td class="text-end">€ 384,37</td>
+                        </tr>
+                        <tr>
+                            <td>Tatauffällige (allgemein, § 11 Abs. 3 Nr. 4 u. 5, Abs. 10 Nr. 2 FeV u. § 2a Abs. 4 u. 5 sowie § 4 Abs. 10 StVG) ohne Alkohol-, Betäubungsmittel- u. Medikamentenauffällige</td>
+                            <td class="text-end">€ 536,69</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <strong>Untersuchungen bei Mehrfachfragestellungen (§ 11 Abs. 6 FeV):</strong><br>
+                        Für die Fragestellung mit dem höchsten Entgelt wird der volle Satz berechnet,
+                        alle weiteren Fragestellungen mit jeweils 1/2 des hierfür geltenden Entgelts.
+                    </p>
+                    </div>
+
+                    </div>
+                    
+                </div>
+
+                <!-- IMAGE ADJACENT TO THIRD DIV -->
+                <div class="col-md-6">
+                    <img src="img/mpu-vorbereitung-alkohol.jpg" alt="Beispielrechnung Führerschein Deutschland" class="img-fluid rounded shadow-sm w-100">
+                </div>
+                </div>
+
+                <!-- Third DIV (Cost Tables) -->
+                <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Rechtliche Grundlage</h5>
+                    <p>Die gegenseitige Anerkennung von Führerscheinen ist in der Europäischen Union seit dem 1. Juli 1996 geregelt. An diesem Tag trat die Zweite Führerscheinrichtlinie 91/439/EWG in Kraft. (Weitere Informationen dazu haben wir unter „EU-Führerscheinerklärung“ zusammengestellt.)
+                    </p>
+
+                    <p>Für Aufsehen sorgte im Jahr 2004 das Urteil des EuGH im Fall Klapper, in dem zum ersten Mal klar dargestellt wurde, dass die Anerkennung eines Führerscheins aus einem anderen EU-Land aufgrund der o.g. Richtlinie in jedem Fall Folge zu leisten ist. Dass umgekehrt ein Fahrer mit einem gültigen EU-Führerschein nicht wegen Fahrens ohne Führerschein bestraft werden darf. Dies gilt auch dann, wenn gegen den Fahrzeugführer in Deutschland eine MPU anhängig ist. Damit war endgültig die rechtliche Grundlage gelegt für all diejenigen, die eine MPU umgehen wollten.
+                    </p>
+
+                    <p>Wem sein Führerschein seither aufgrund von Drogen- und Alkohol-Missbrauch entzogen wurde, bekommt durch das Urteil eine zweite Chance am Auto-Steuer in der EU und Deutschland. Wir unterstützen Sie bei jedem Schritt Ihres Weges, nehmen Ihnen die Besuche bei jeder Behörde ab und kümmern uns um die gesamte Administration. Mit uns können Sie die MPU umgehen und müssen sich nicht über ein negatives Gutachten ärgern. Nutzen Sie Ihre Chance: Wenn wir den Führerschein beantragen und Sie ihn schließlich wieder in Händen halten, fahren Sie verantwortungsvoll und begrenzen Sie den Konsum von Alkohol. Nur ohne Alkohol und Drogen fahren Sie gut!
+                    </p>
+                    <!-- IMAGE BELOW FIRST DIV -->
+                        <div class="p-4">
+                        <img src="img/neuer-fuehrerschein-kostet.jpg" alt="Führerschein Kosten Überblick" class="img-fluid rounded shadow-sm w-100">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-3">Wann ist ein EU-Führerschein Gültig?</h5>
+                    <p>Sie sehen: Der Grundstein dafür, mit einem EU-Führerschein die MPU zu umgehen ist gesetzlich gelegt. Doch ein Wort sticht dabei ins Auge: gültig. Welche Grundsätze müssen erfüllt sein, damit man die Fahrerlaubnis aus dem EU-Ausland gültig und somit auch in Deutschland anzuerkennen ist?
+                    </p>
+                    <ul>
+                    <li>Einer der wichtigsten Punkte, die in diesem Zusammenhang genannt werden müssen, ist das Wohnsitzprinzip. Seit den ersten Urteilen über die Gültigkeit des EU-Führerscheins ist klar, dass man diese sog. 185-Tage-Regel in jedem Fall einhalten muss. Erst dieser Wohnsitz-Bescheid von mindestens einem halben Jahr (also 185 Tagen) berechtigt dazu, mit einem Führerschein aus dem Ausland ein Fahrzeug zu führen. Ist dieser Nachweis erbracht, ist die EU-Fahrerlaubnis aber in vollem Umfang in Deutschland legal.</li>
+                    <li>Ein zweiter Faktor, der Einfluss auf die EU-Führerschein-Gültigkeit haben kann, ist eine Sperrfrist in Deutschland. Sollte eine solche gegen Sie vorliegen, ist kein anderes EU-Land berechtigt, Ihnen einen Führerschein auszustellen. Sobald sie aber abgelaufen ist, kann der Weg zu Ihrer neuen Mobilität beginnen. (Die Dauer der Sperrfrist kann aber durchaus für Ihren Wohnsitz-Antrag genutzt werden. Sprechen Sie uns an!). </li>
+                    <li>Wem sein Führerschein seither aufgrund von Drogen- und Alkohol-Missbrauch entzogen wurde, bekommt durch das Urteil eine zweite Chance am Auto-Steuer in der EU und Deutschland. Wir unterstützen Sie bei jedem Schritt Ihres Weges, nehmen Ihnen die Besuche bei jeder Behörde ab und kümmern uns um die gesamte Administration. Mit uns können Sie die MPU umgehen und müssen sich nicht über ein negatives Gutachten ärgern. Nutzen Sie Ihre Chance: Wenn wir den Führerschein beantragen und Sie ihn schließlich wieder in Händen halten, fahren Sie verantwortungsvoll und begrenzen Sie den Konsum von Alkohol. Nur ohne Alkohol und Drogen fahren Sie gut!</li>
+                    </ul>
+                    <h5 style="color: red;">Die MPU gibt es nur in Deutschland:</h5>
+                    <p>Ein zweiter wichtiger Punkt, um zu verstehen, weshalb man mittels Fahrerlaubnis aus dem EU-Ausland seinen Führerschein ohne MPU machen kann, betrifft die Untersuchung selbst. Denn faktisch gibt es die MPU oder eine vergleichbare Fahrtauglichkeitsfeststellung nur in Deutschland und Österreich. Das bedeutet, dass die Auflage einer MPU für den Wiedererhalt des deutschen EU-Führerscheins nicht bedeutet, dass der Neuerwerb in Polen nicht möglich wäre.</p>
+                </div>
+                </div>
+
+                <!-- Quellen -->
+                <div class="mt-5">
+                <h6>Quellen (Auswahl)</h6>
+                <ul class="small">
+                    <li>ADAC: <a href="https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/fuehrerschein-kosten/" target="_blank" rel="noopener">Führerschein Kosten (Klasse B)</a></li>
+                    <li>TÜV SÜD: <a href="https://www.tuvsud.com/de-de/branchen/mobilitaet-und-automotive/fuehrerschein-und-pruefung/fuehrerschein-und-pruefung/rund-um-die-fuehrerscheinpruefung/gebuehren" target="_blank" rel="noopener">Prüfungsgebühren</a></li>
+                    <li>Erste Hilfe Kurse: <a href="https://www.erstehilfe.de/kurs/buchen" target="_blank" rel="noopener">erstehilfe.de</a></li>
+                </ul>
+                <p class="small text-muted mb-0">Stand: 2025; Preise können je nach Region und Fahrschule variieren.</p>
+                </div>
+            </div>
+            </div>
+
+
+        <!--Kosten End -->
+
+
+        <!--Banner Start-->
+
+        <div class="banner-section">
+        <img src="img/fahrschule-in-berlin.jpg" alt="Banner" class="banner-img">
+
+        <!-- Overlay text -->
+        <div class="banner-text">Deutsch Führerschein Machen</div>
+
+        <!-- Overlay button -->
+        <a href="#" class="btn btn-primary rounded-pill banner-btn">Jetzt Entdecken</a>
+        </div>
+
+        <!--Banner End-->
+
+
+        <!-- Blurbs Start -->
+        <div class="container my-5">
+        <div class="text-center py-5">
+            <h2>Führerschein Kategorien</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/zweirad-fuhrerscheine.jpg" alt="Zweirad Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Zweirad Führerscheine</h4>
+                <p>Freude pur: Genieße den Spaß auf zwei Rädern. Bei uns erhältst Du das Ticket für grenzenloses Fahrvergnügen.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/auto-fuhrerscheine.jpg" alt="Auto Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Auto Führerscheine</h4>
+                <p>Steig ein: Wir machen Dich fit für die große Freiheit. Bald entscheidest Du, wann und wo es hingeht.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/lkw-bus-fuhrerscheine.jpg" alt="Lkw / Bus Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Lkw / Bus Führerscheine</h4>
+                <p>Vorfahrt für Deine berufliche Zukunft: Ob mit dem Bus oder „auf dem Bock“, wir machen den Weg frei.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Blurbs End -->
+
+
+        <!-- Faq Start -->
+
+        <div class="container-fluid ExploreTour">
+            <div class="container py-5">
+            <div class="row">
+                    <!-- LEFT COLUMN -->
+                    <div class="col-lg-6 text-start">
+                        <h3 class="mb-3">So Vermeiden Sie die MPU zum EU-Führerschein</h3>
+                        <p>
+                            Entdecken Sie unser einzigartiges Komplettpaket zum Erwerb eines gültigen EU-Führerscheins in Deutschland. Mit unserem Service erhalten Sie im Ausland einen Führerschein, mit dem Sie die MPU (Medizinische Untersuchung) legal und nachhaltig vermeiden. Wir bieten außerdem die MPU-Umgehung für Führerscheine in Polen, Tschechien und Ungarn an:
+                        </p>
+                        <p>
+                            Unsere EU-Führerscheinagentur sorgt dafür, dass Sie die Sperrfrist überspringen und bald wieder in Deutschland und der EU Auto fahren können. Egal, welche Fragen Sie zur Neuausstellung Ihres Führerscheins haben: ob zur Frist, Ihrem Antrag auf Auslandsaufenthalt, dem neuen Bußgeldkatalog 2025 oder dem Gang zur Behörde oder Führerscheinstelle. Mit unserer EU-Führerscheinagentur vermeiden Sie die MPU (Ärztliche Untersuchung zur Fahrerlaubnisprüfung) und sitzen so schnell wie möglich wieder hinter dem Steuer!
+                        </p>
+                        <p>
+                            Haben Sie weitere Fragen, beispielsweise zur Verjährung der MPU (Ärztliche Untersuchung zur Fahrerlaubnisprüfung)? <a href="#">Kontaktieren Sie uns</a>, damit einer unserer Experten den Ablauf der psychologischen (Idiotentest) Untersuchung nach Fahren unter Alkoholeinfluss klären kann.
+                        </p>
+                    </div>
+
+                    <!-- RIGHT COLUMN (ACCORDION) -->
+                    <div class="col-lg-6">
+                        <div class="accordion" id="travelAccordion">
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Wie erhalte ich einen deutschen Führerschein?
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wenn Sie zum ersten Mal einen Führerschein beantragen möchten, müssen Sie Folgendes tun:</p>
+                                <ul>
+                                    <li>Melden Sie sich bei unserer Fahrschule an. Unsere professionellen Fahrlehrer sprechen Deutsch, Englisch, Spanisch, Französisch oder Arabisch.</li>
+                                    <li>Nehmen Sie an einem Erste-Hilfe-Kurs teil. Kurse finden Sie in Ihrer Nähe bei <a href="https://www.asb.de/unsere-angebote/erste-hilfe">ASB</a> oder <a href="https://www.johanniter.de/dienste-leistungen/medizinische-hilfe/erste-hilfe/erste-hilfe-kurse-fuer-privatpersonen/">Johannitern</a>.</li>
+                                    <li>Lassen Sie Ihre Augen von einem Optiker oder Augenarzt untersuchen (Sehtest). Der Sehtest kostet etwa 7 €. Einige Optiker bieten auch kostenlose Sehtests an. Auch einige Erste-Hilfe-Kurse bieten kostenlose Sehtests an.</li>
+                                    <li>Machen Sie ein biometrisches Passfoto</li>
+
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Wie sieht eine praktische Fahrprüfung aus?
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wenn du die Theorieprüfung bestanden hast, kannst du die Fahrprüfung ablegen. Diese dauert in der Regel 50 bis 60 Minuten. In dieser Zeit musst du deine Fähigkeiten in vorgegebenen Fahrsituationen (Kreisverkehre, Autobahnen usw.) unter Beweis stellen. Der Prüfer sitzt in der Regel auf dem Rücksitz und beurteilt deine Fahrweise hinsichtlich Sicherheit, Kompetenz und Ruhe. Dein Fahrlehrer sitzt neben dir und übernimmt im Notfall die Kontrolle.</p>
+                                <p>Wir wünschen dir viel Erfolg! Solltest du die Prüfung nicht beim ersten Versuch bestehen, kannst du sie nach zwei Wochen wiederholen. Die Anzahl der Wiederholungen ist unbegrenzt.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Wie viel kostet der Erwerb eines deutschen Führerscheins?
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Der Führerschein kostet insgesamt zwischen 2.600 und 3.500 Euro. Der Preis hängt von der Anzahl der Fahrstunden ab. In Ostdeutschland ist der Führerschein im Durchschnitt günstiger als in Westdeutschland. Die Kosten für Theorie- und Fahrstunden machen den größten Teil der Summe aus. Ob Theorieunterricht erforderlich ist, hängt von verschiedenen Faktoren ab. Manche Fahrstunden sind für Fahranfänger obligatorisch (z. B. Autobahn-, Nacht- oder Überlandfahrten).
+                                </p>
+                                <p>Die Anzahl der benötigten Fahrstunden bestimmt Ihr Fahrlehrer. Erst wenn Ihr Fahrlehrer überzeugt ist, dass Sie sicher fahren können, können Sie sich zur Fahrprüfung anmelden. Die Preise für Fahrstunden sind bei jeder Fahrschule unterschiedlich. Im Vergleich zu den Kosten für die Fahrstunden selbst fallen die Gebühren für die Theorie- und Fahrprüfung nicht ins Gewicht. Die Preise für die Fahrprüfung in Bayern und Baden-Württemberg finden Sie beispielsweise auf <a href="https://www.tuvsud.com/de-de/branchen/mobilitaet-und-automotive/fuehrerschein-und-pruefung/fuehrerschein-und-pruefung/rund-um-die-fuehrerscheinpruefung/gebuehren"> www.tuev-sued.de.</a> Die theoretische Prüfung kostet ca. 25 €. Die praktische Prüfung kostet ca. 120 €.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Faq End -->
+         
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
+                            <img src="img/fahrprüfung-und-fahrprüfer.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">Anforderungen</h1>
+                        <h5 class="section-about-title pe-3">Körperliche und geistige Tauglichkeit</h5>
+                        <p class="mb-4">Bevor die zuständigen Behörden Ihnen einen Führerschein aushändigen, prüfen sie Ihre Fahrtauglichkeit. Unter Umständen ist bei jeder Verlängerung der Fahrerlaubnis oder ab einem gewissen Alter eine ärztliche Untersuchung vorgeschrieben. Lkw- und Busfahrer müssen alle fünf Jahre zur ärztlichen Kontrolle.</p>
+                        <h5 class="section-about-title pe-3">Fahrprüfung und Fahrprüfer</h5>
+                        <p class="mb-4">Sie müssen den Führerschein in dem Land beantragen, in dem Sie gewöhnlich oder regelmäßig leben. In der Regel handelt es sich hierbei um das Land, in dem Sie aufgrund persönlicher oder beruflicher Bindungen mindestens 185 Tage im Kalenderjahr leben. Es gibt <strong>keine EU-weiten Vorschriften</strong> zur Fahrerausbildung, zu Fahrschulen oder zu Fahrlehrern. Es gibt jedoch <strong>EU-Mindeststandards</strong> für:</p>
+                        <ul>
+                            <li>die <strong>Fahrprüfung</strong> – Sie müssen eine theoretische und eine praktische Prüfung ablegen.</li>
+                            <li>die <strong>Fahrprüfer</strong> – Sie müssen eine entsprechende Schulung erfolgreich durchlaufen und regelmäßig an Qualitätssicherungs- und Fortbildungsmaßnahmen teilnehmen .</li>
+                        </ul>
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Motorräder,Klasse A1, A2 | Mopeds, AM</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kraftfahrzeuge, Klasse B, BE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mittelschwere Fahrzeuge, Klasse C1, C1E</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Schwere Krafträder, Klasse A</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Große Fahrzeuge, Klasse C, CE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Busse, Klasse D, DE | Minibusse, D1, D1E</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Travel Guide Start -->
+        <div class="container-fluid guide py-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Travel Guide</h5>
+                    <h1 class="mb-0">Lernen Sie unsere Fahrer kennen</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-leonie-schwarz.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Leonie Schwarz</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-moritz-schuster.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Moritz Schuster</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-gisela-franke.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Gisela Franke</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-lukas-schneider.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Lukas Schneider</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Travel Guide End -->
+
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Subscribe</h5>
+                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    </p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- Load jQuery locally -->
+        <script src="js/jquery.min.js"></script>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

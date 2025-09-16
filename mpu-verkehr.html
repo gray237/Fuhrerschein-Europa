@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Führerschein Europa - MPU Verkehr Umfassende Vorbereitung (Idiotentest) </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end" id="header-auth">
+                    <!-- JS will populate this based on login status -->
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/fuhrerschein-europa-logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Fahrschule</a>
+                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <div class="nav-item dropdown">
+                            <a href="mpu.html" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">MPU</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="mpu-verkehr.html" class="dropdown-item">MPU-Verkehr</a>
+                                <a href="mpu-drogen.html" class="dropdown-item">MPU Drogen</a>
+                                <a href="mpu-alkohol.html" class="dropdown-item">MPU Alkohol</a>
+                                <a href="mpu-delikte.html" class="dropdown-item">MPU-Delikte</a>
+                                <a href="sperrfristverkürzung.html" class="dropdown-item">Sperrfristverkürzung</a>
+                                <a href="abstinenznachweis.html" class="dropdown-item">Abstinenznachweis</a>
+                            </div>
+                        </div>
+                        <a href="pakete.html" class="nav-item nav-link">Pakete</a>
+                        <div class="nav-item dropdown">
+                            <a href="leistungen.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
+                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
+                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">MPU Verkehr – Vorbereitung</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Fahrschule</a></li>
+                    <li class="breadcrumb-item"><a href="mpu.html">Idiotentest</a></li>
+                    <li class="breadcrumb-item active text-white">MPU Verkehr</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div>
+                            <img src="img/mpu-verkehr -vorbereitung.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">MPU Verkehr – <span class="text-primary"> Vorbereitungsprozess</span></h1>
+                        <p class="mb-4">Die MPU Verkehr (Medizinisch-Psychologische Untersuchung) ist eine spezielle Untersuchung, die angeordnet wird, wenn die Fahrerlaubnis aufgrund wiederholter oder besonders schwerer Verkehrsverstöße entzogen wurde. Diese Form der MPU stellt besondere Anforderungen an die Betroffenen, da sie nicht nur das aktuelle Fahrverhalten, sondern auch die Einstellung zur Verkehrssicherheit und das Verständnis der Folgen von Verkehrsverstößen bewertet.</p>
+                        <p class="mb-4">Bei Führerschein Europa bereiten wir Sie umfassend auf diese Untersuchung vor. Wir unterstützen Sie dabei, frühere Verstöße zu reflektieren, nachhaltige Verhaltensänderungen zu entwickeln und sich optimal auf die psychologische Begutachtung vorzubereiten, sodass Ihre Chancen auf eine positive MPU deutlich steigen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- MPU Reasons Section Start -->
+
+        <div class="container-fluid blurb py-5">
+        <div class="container py-5 text-center">
+            <div class="mx-auto mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">Häufige Gründe für die Anordnung eines MPU-Verkehrs</h5>
+            <h1 class="mb-0">Warum wird ein MPU-Verkehr angeordnet?</h1>
+            </div>
+
+            <div class="row justify-content-center g-4">
+            <!-- Item 1 -->
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="blurb-card h-100 text-center">
+                <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                    <h5 class="mb-3">Wiederholte Geschwindigkeitsüberschreitungen</h5>
+                    <img src="img/Wiederholte-Geschwindigkeits-verstoesse.png" class="img-fluid rounded mx-auto" alt="Verkehrsverstöße">
+                </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="blurb-card h-100 text-center">
+                <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                    <h5 class="mb-3">Durchführen von Überholmanövern in verbotenen Bereichen</h5>
+                    <img src="img/Ueberholen-bei-Ueberholverbot.png" class="img-fluid rounded mx-auto" alt="Drogen MPU">
+                </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="blurb-card h-100 text-center">
+                <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                    <h5 class="mb-3">Nichteinhaltung des Sicherheitsabstands während der Fahrt</h5>
+                    <img src="img/Abstandsmissachtung.png" class="img-fluid rounded mx-auto" alt="Alkohol MPU">
+                </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="blurb-card h-100 text-center">
+                <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                    <h5 class="mb-3">Bedienung eines elektronischen Geräts während der Fahrt</h5>
+                    <img src="img/Bedienen-eines-elektronischen-Geraets-waehrend-der-Fahrt.png" class="img-fluid rounded mx-auto" alt="Straftaten MPU">
+                </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="blurb-card h-100 text-center">
+                <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                    <h5 class="mb-3">Rotlichtverstöße und Missachtung von Verkehrssignalen</h5>
+                    <img src="img/Rotlichtverstoesse.png" class="img-fluid rounded mx-auto" alt="Sperrfrist MPU">
+                </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="blurb-card h-100 text-center">
+                <div class="blurb-content p-4" style="background: linear-gradient(180deg,#ecf7ff 34%,#ffffff 100%);">
+                    <h5 class="mb-3">Probleme, die während der Probezeit auftreten</h5>
+                    <img src="img/Auffaelligkeiten-waehrend-der-Probezeit.png" class="img-fluid rounded mx-auto" alt="Abstinenznachweis MPU">
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </div>
+        <!-- MPU Reasons Section End -->
+
+
+
+        <!-- MPU Support Section Start -->
+
+        <div class="container-fluid my-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+            
+            <!-- Left Column (Blurbs) -->
+            <div class="col-lg-6">
+                <h2 class="mb-4">Professionelle Hilfe für die MPU Verkehr</h2>
+                <p class="text-muted mb-4">
+                Bei Führerschein Europa MPU bieten wir Ihnen umfassende und individuelle Unterstützung, um Ihre Erfolgschancen in der MPU Verkehr deutlich zu erhöhen:
+                </p>
+
+                <!-- Blurb 1 -->
+                <div class="blurb-card d-flex align-items-start p-3 mb-3">
+                <div class="blurb-icon me-3">
+                    <span class="check-circle"><i class="fa fa-check"></i></span>
+                </div>
+                <div class="blurb-content text-start">
+                    <h4>Individuelle Beratung</h4>
+                    <p>Wir analysieren Ihre persönliche Situation und entwickeln gemeinsam einen maßgeschneiderten Plan, der alle Aspekte der MPU Verkehr abdeckt.</p>
+                </div>
+                </div>
+
+                <!-- Blurb 2 -->
+                <div class="blurb-card d-flex align-items-start p-3 mb-3">
+                <div class="blurb-icon me-3">
+                    <span class="check-circle"><i class="fa fa-check"></i></span>
+                </div>
+                <div class="blurb-content text-start">
+                    <h4>Verkehrspsychologische Vorbereitung</h4>
+                    <p>Unsere erfahrenen Verkehrspsychologen helfen Ihnen, die Ursachen Ihrer Verkehrsverstöße zu verstehen und Strategien für ein nachhaltiges Verhaltensänderung zu entwickeln.</p>
+                </div>
+                </div>
+
+                <!-- Blurb 3 -->
+                <div class="blurb-card d-flex align-items-start p-3">
+                <div class="blurb-icon me-3">
+                    <span class="check-circle"><i class="fa fa-check"></i></span>
+                </div>
+                <div class="blurb-content text-start">
+                    <h4>Simulation der MPU</h4>
+                    <p>Wir bereiten Sie auf die psychologische Begutachtung durch gezielte Übungsinterviews vor, um Ihnen Sicherheit und Selbstvertrauen für die Prüfung zu geben.</p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Image with background) -->
+            <div class="col-lg-6 position-relative">
+                <div class="image-wrapper">
+                <img src="img/mpu-beratung.jpg" class="img-fluid rounded shadow" alt="MPU Support">
+            </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- MPU Support Section End -->
+         
+
+
+        <!-- Faq Start -->
+
+        <div class="container-fluid ExploreTour">
+            <div class="container py-5">
+            <div class="row">
+                    <!-- LEFT COLUMN -->
+                    <div class="col-lg-6 text-start">
+                        <h3 class="mb-3">MPU Verkehr – Vorbereitung bei EU-Führerschein</h3>
+                        <p>
+                            Die MPU im Verkehrsbereich wird angeordnet, wenn die Fahrerlaubnis aufgrund wiederholter oder besonders schwerer Verkehrsverstöße entzogen wurde. Ziel der Untersuchung ist es, Ihre Eignung zum sicheren Führen eines Fahrzeugs nachzuweisen. Bei Führerschein Europa bieten wir Ihnen eine umfassende, individuelle Betreuung, die weit über die bloße Vorbereitung auf die Prüfung hinausgeht. Wir analysieren Ihre persönliche Situation, entwickeln einen maßgeschneiderten Plan und unterstützen Sie bei allen Schritten, damit Sie die MPU erfolgreich bestehen. 
+                        </p>
+                        <p>
+                            Unsere erfahrenen Experten helfen Ihnen, Ursachen für frühere Verstöße zu erkennen, nachhaltige Verhaltensänderungen zu erarbeiten und sich optimal auf die psychologische Begutachtung vorzubereiten. So steigern Sie Ihre Chancen auf eine positive MPU deutlich und kehren selbstbewusst zurück ins Straßenverkehrsleben.
+                        </p>
+                    </div>
+
+                    <!-- RIGHT COLUMN (ACCORDION) -->
+                    <div class="col-lg-6 faq">
+                        <div class="accordion" id="travelAccordion">
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Individuelle Beratung
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Wir analysieren Ihre persönliche Situation und erstellen gemeinsam einen maßgeschneiderten Plan. Dabei decken wir alle Aspekte der MPU Verkehr ab, um gezielt auf Ihre individuellen Schwachstellen einzugehen.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Verkehrspsychologische Vorbereitung
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Unsere erfahrenen Verkehrspsychologen unterstützen Sie dabei, die Ursachen Ihrer Verstöße zu erkennen. Mit gezielten Strategien zur Verhaltensänderung lernen Sie, nachhaltige Verhaltensmuster im Straßenverkehr zu entwickeln.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Simulation der MPU
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>Durch praxisnahe Übungsinterviews bereiten wir Sie optimal auf die psychologische Begutachtung vor. Sie gewinnen Sicherheit und Selbstvertrauen, sodass Sie die Prüfung entspannt und gut vorbereitet angehen können.</p>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Führerschein-Kategorien
+                            </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                <p>DWir beraten und begleiten Sie für alle relevanten Klassen, von Zweirädern über PKW bis hin zu LKW und Bussen. So sind Sie umfassend auf die Anforderungen der MPU Verkehr vorbereitet.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Faq End -->
+
+        <!-- Blurbs Start -->
+        <div class="container blurb-section my-5">
+        <div class="text-center py-5">
+            <h2>Der Ablauf des MPU-Verkehrs</h2>
+            <p>Der MPU-Verkehr umfasst mehrere Schritte, die sorgfältig vorbereitet werden sollten.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100"> <!-- FIX: added blurb-card -->
+                <div class="blurb-img">
+                <img src="img/medizinische-untersuchung.jpg" alt="Zweirad Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Ärztliche Untersuchung</h4>
+                <p>Ihr allgemeiner Gesundheitszustand wird überprüft, um sicherzustellen, dass keine körperlichen oder geistigen Beeinträchtigungen vorliegen, die Ihre Fahrtüchtigkeit beeinträchtigen könnten.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/psychologische-begutachtung.jpg" alt="Auto Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Psychologische Begutachtung</h4>
+                <p>Ihre Einstellung zum Straßenverkehr und Verständnis von Verkehrssicherheit werden geprüft, damit Sie Verstöße reflektiert haben und sich künftig verantwortungsvoll verhalten.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-4 col-md-6">
+            <div class="blurb-card h-100">
+                <div class="blurb-img">
+                <img src="img/insurance-kgf-new-light.jpg" alt="Lkw / Bus Führerscheine" class="img-fluid">
+                </div>
+                <div class="blurb-content text-center p-4">
+                <h4 class="mb-2">Verhaltensänderung und Einsicht</h4>
+                <p>Der Erfolg der MPU im Verkehr hängt von Ihrer Glaubwürdigkeit ab, dass Sie Ihr Fahrverhalten dauerhaft geändert haben und sich der Einhaltung der Verkehrsregeln bewusst sind.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Blurbs End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Kontakt für alle Fragen</h5>
+                    <h1 class="mb-0">Jetzt Termin Vereinbaren</h1>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-4">
+                        <div class="bg-white rounded p-4">
+                            <div class="text-center mb-4">
+                                <i class="fa fa-map-marker-alt fa-3x text-primary"></i>
+                                <h4 class="text-primary"><Address></Address></h4>
+                                <p class="mb-0">123 ranking Street, <br> New York, USA</p>
+                            </div>
+                            <div class="text-center mb-4">
+                                <i class="fa fa-phone-alt fa-3x text-primary mb-3"></i>
+                                <h4 class="text-primary">Mobile</h4>
+                                <p class="mb-0">+012 345 67890</p>
+                                <p class="mb-0">+012 345 67890</p>
+                            </div>
+                           
+                            <div class="text-center">
+                                <i class="fa fa-envelope-open fa-3x text-primary mb-3"></i>
+                                <h4 class="text-primary">Email</h4>
+                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0">info@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 class="mb-2">Ihr zuverlässiger Partner für einen erfolgreichen MPU-Verkehr</h3>
+                        <p class="mb-4">Nutzen Sie unsere professionelle Unterstützung für Ihren MPU-Verkehr. Vereinbaren Sie hier Ihr kostenloses Erstgespräch! <a href="https://htmlcodex.com/contact-form">Jetzt Registrieren</a>.</p>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+         
+
+        <!-- About Start -->
+        <div class="container-fluid about">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
+                            <img src="img/fahrprüfung-und-fahrprüfer.jpg" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/map-of-europe.jpg);">
+                        <h1 class="mb-4">Anforderungen</h1>
+                        <h5 class="section-about-title pe-3">Körperliche und geistige Tauglichkeit</h5>
+                        <p class="mb-4">Bevor die zuständigen Behörden Ihnen einen Führerschein aushändigen, prüfen sie Ihre Fahrtauglichkeit. Unter Umständen ist bei jeder Verlängerung der Fahrerlaubnis oder ab einem gewissen Alter eine ärztliche Untersuchung vorgeschrieben. Lkw- und Busfahrer müssen alle fünf Jahre zur ärztlichen Kontrolle.</p>
+                        <h5 class="section-about-title pe-3">Fahrprüfung und Fahrprüfer</h5>
+                        <p class="mb-4">Sie müssen den Führerschein in dem Land beantragen, in dem Sie gewöhnlich oder regelmäßig leben. In der Regel handelt es sich hierbei um das Land, in dem Sie aufgrund persönlicher oder beruflicher Bindungen mindestens 185 Tage im Kalenderjahr leben. Es gibt <strong>keine EU-weiten Vorschriften</strong> zur Fahrerausbildung, zu Fahrschulen oder zu Fahrlehrern. Es gibt jedoch <strong>EU-Mindeststandards</strong> für:</p>
+                        <ul>
+                            <li>die <strong>Fahrprüfung</strong> – Sie müssen eine theoretische und eine praktische Prüfung ablegen.</li>
+                            <li>die <strong>Fahrprüfer</strong> – Sie müssen eine entsprechende Schulung erfolgreich durchlaufen und regelmäßig an Qualitätssicherungs- und Fortbildungsmaßnahmen teilnehmen .</li>
+                        </ul>
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Motorräder,Klasse A1, A2 | Mopeds, AM</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kraftfahrzeuge, Klasse B, BE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mittelschwere Fahrzeuge, Klasse C1, C1E</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Schwere Krafträder, Klasse A</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Große Fahrzeuge, Klasse C, CE</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Busse, Klasse D, DE | Minibusse, D1, D1E</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Travel Guide Start -->
+        <div class="container-fluid guide py-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Travel Guide</h5>
+                    <h1 class="mb-0">Lernen Sie unsere Fahrer kennen</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-leonie-schwarz.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Leonie Schwarz</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-moritz-schuster.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Moritz Schuster</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-gisela-franke.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Gisela Franke</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="img/fahrschullehrer-lukas-schneider.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">Lukas Schneider</h4>
+                                    <p class="mb-0">Fahrschullehrer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Travel Guide End -->
+
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Subscribe</h5>
+                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    </p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">Arabic</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Greek</option>
+                                                <option value="3">New York</option>
+                                            </select>
+                                            <label for="select1">English</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6">
+                                    <form>
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="select1">
+                                                <option value="1">USD</option>
+                                                <option value="2">EUR</option>
+                                                <option value="3">INR</option>
+                                                <option value="3">GBP</option>
+                                            </select>
+                                            <label for="select1">$</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- Load jQuery locally -->
+        <script src="js/jquery.min.js"></script>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
