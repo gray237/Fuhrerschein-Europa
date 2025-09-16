@@ -3,12 +3,11 @@
 
     // Spinner
     window.addEventListener("load", function () {
-    const spinner = document.getElementById("spinner");
-    if (spinner) {
-      spinner.classList.remove("show");
-    }
-  });
-
+        const spinner = document.getElementById("spinner");
+        if (spinner) {
+            spinner.classList.remove("show");
+        }
+    });
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -18,7 +17,6 @@
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
     });
-
 
     // International Tour carousel
     $(".InternationalTour-carousel").owlCarousel({
@@ -35,21 +33,12 @@
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:2
-            },
-            1200:{
-                items:3
-            }
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:2 },
+            1200:{ items:3 }
         }
     });
-
 
     // packages carousel
     $(".packages-carousel").owlCarousel({
@@ -66,21 +55,12 @@
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:2
-            },
-            1200:{
-                items:3
-            }
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:2 },
+            1200:{ items:3 }
         }
     });
-
 
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
@@ -97,34 +77,25 @@
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:2
-            },
-            1200:{
-                items:3
-            }
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:2 },
+            1200:{ items:3 }
         }
     });
 
-    
    // Back to top button
    $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
-    }); 
+    });
 
 })(jQuery);
 
@@ -200,5 +171,94 @@ if (submitBtn) {
   });
 }
 
+// Subscription Form Submission (Netlify + Popup)
+const subscribeForm = document.querySelector('form[name="subscribe"]');
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(subscribeForm);
+
+    fetch("/", {
+      method: "POST",
+      body: formData
+    })
+    .then(() => {
+      let successMsg = document.getElementById("success-message");
+      if (successMsg) {
+        successMsg.style.display = "block";
+      } else {
+        alert("✅ Vielen Dank für Ihre Anmeldung!");
+      }
+      subscribeForm.reset();
+    })
+    .catch(() => {
+      alert("❌ Es gab ein Problem bei der Anmeldung. Bitte versuchen Sie es erneut.");
+    });
+  });
+}
+
+// Contact Form Submission (Netlify + Popup)
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  const thankYouPopup = document.getElementById("thankYouPopup");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+
+      fetch("/", {
+        method: "POST",
+        body: formData,
+      })
+        .then(() => {
+          contactForm.reset();
+          thankYouPopup.style.display = "flex";
+
+          // Auto-close popup after 5 seconds
+          setTimeout(() => {
+            thankYouPopup.style.display = "none";
+          }, 5000);
+        })
+        .catch((error) => {
+          alert("❌ Error sending form: " + error);
+        });
+    });
+  }
+
+  // Allow manual close
+  window.closeThankYouPopup = function () {
+    thankYouPopup.style.display = "none";
+  };
+});
+
+// Language Translation Dropdown
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("select1");
+
+  if (langSelect) {
+    langSelect.addEventListener("change", function() {
+      const lang = this.value;
+      if (!lang) return;
+
+      // Map select values to language codes for Google Translate
+      const langMap = {
+        "1": "en", // English
+        "2": "es", // Spanish
+        "3": "ar", // Arabic
+        "4": "fr", // French
+        "5": "de"  // Deutsch
+      };
+
+      const targetLang = langMap[lang];
+      if (targetLang) {
+        const translateUrl = "https://translate.google.com/translate?sl=auto&tl=" 
+                              + targetLang + "&u=" + encodeURIComponent(window.location.href);
+        window.location.href = translateUrl;
+      }
+    });
+  }
+});
 
 

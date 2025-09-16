@@ -64,30 +64,45 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Fahrschule</a>
-                        <a href="führerschein.html" class="nav-item nav-link">Führerschein</a>
-                        <a href="mpu.html" class="nav-item nav-link">MPU</a>
+                        <a href="fuhrerschein.html" class="nav-item nav-link">Führerschein</a>
+                        <div class="nav-item dropdown">
+                            <a href="mpu.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MPU</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="mpu-verkehr.html" class="dropdown-item">MPU-Verkehr</a>
+                                <a href="mpu-drogen.html" class="dropdown-item">MPU Drogen</a>
+                                <a href="mpu-alkohol.html" class="dropdown-item">MPU Alkohol</a>
+                                <a href="mpu-delikte.html" class="dropdown-item">MPU-Delikte</a>
+                                <a href="sperrfristverkürzung.html" class="dropdown-item">Sperrfristverkürzung</a>
+                                <a href="abstinenznachweis.html" class="dropdown-item">Abstinenznachweis</a>
+                            </div>
+                        </div>
                         <a href="pakete.html" class="nav-item nav-link">Pakete</a>
                         <div class="nav-item dropdown">
                             <a href="leistungen.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Leistungen</a>
                             <div class="dropdown-menu m-0">
                                 <a href="kosten.html" class="dropdown-item">Kosten</a>
+                                <a href="gultigkeit.html" class="dropdown-item">Gültigkeit</a>
                                 <a href="umschreiben.html" class="dropdown-item">Umschreiben</a>
-                                <a href="verlängerung.html" class="dropdown-item">Verlängerung</a>
-                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
+                                <a href="verlangerung.html" class="dropdown-item">Verlängerung</a>
                                 <a href="autovermietung.html" class="dropdown-item">Autovermietung</a>
-                                <a href="gültigkeit.html" class="dropdown-item">Gültigkeit</a>
-                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                                <a href="standardregelung.html" class="dropdown-item">Standardregelung</a>
                             </div>
                         </div>
                         <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <a href="über-uns.html" class="nav-item nav-link">Über Uns</a>
+                        <div class="nav-item dropdown">
+                            <a href="uber-uns.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Über Uns</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="uber-uns.html" class="dropdown-item">Unsere Geschichte</a>
+                                <a href="kundenbewertung.html" class="dropdown-item">Kundenbewertung</a>
+                            </div>
+                        </div>
                         <a href="kontakt.html" class="nav-item nav-link">Kontakt</a>
                     </div>
                     <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Registrieren</a>
                 </div>
             </nav>
         </div>
-        <!-- Navbar & Hero End -->
+    <!-- Navbar & Hero End -->
 
     <!-- Page Header -->
     <div class="container-fluid bg-breadcrumb">
@@ -117,12 +132,131 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="container-fluid footer py-5">
-        <div class="container py-5 text-center">
-            <p class="text-white mb-0">&copy; 2025 Your Driving School. All rights reserved.</p>
+    <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Finden Sie Ihre Fahrschule</h5>
+                    <h1 class="text-white mb-4">Beschleunigter Deutscher Führerschein</h1>
+                    <div class="mb-4">
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Nürnberg</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Frankfurt</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Berlin</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">München</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Hamburg</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Köln</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Dresden</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Düsseldorf</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Essen</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Bremen</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Stuttgart</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Leipzig</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Dortmund</a>
+                        <a class="btn btn-primary rounded-pill px-5 mt-2" href="#">Hannover</a>
+                    </div>
+                    <form name="subscribe" method="POST" data-netlify="true" class="position-relative mx-auto" onsubmit="showSuccess(event)">
+                    <input type="hidden" name="form-name" value="subscribe">
+
+                    <input 
+                        class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" 
+                        type="email" 
+                        name="email" 
+                        placeholder="Ihre E-Mail" 
+                        required
+                    >
+
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">
+                        Abonnieren
+                    </button>
+                    </form>
+
+                    <!-- Success message (hidden by default) -->
+                    <div id="success-message" class="alert alert-success mt-3" style="display:none;">
+                    ✅ Vielen Dank für Ihre Anmeldung! Sie haben sich erfolgreich registriert.
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-    </div>
+        <!-- Subscribe End -->
+
+    <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Kontaktieren Sie uns</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> Frankfurt, Deutschland</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> fuhrerscheineuro@gmail.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Fahrschule</h4>
+                            <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="uber-uns.html"><i class="fas fa-angle-right me-2"></i> Über Uns</a>
+                            <a href="leistungen.html"><i class="fas fa-angle-right me-2"></i> Leistungen</a>
+                            <a href="mpu.html"><i class="fas fa-angle-right me-2"></i> MPU Umgehen</a>
+                            <a href="autovermietung.html"><i class="fas fa-angle-right me-2"></i> Autovermietung</a>
+                            <a href="fuhrerschein.html"><i class="fas fa-angle-right me-2"></i> Express-Führerschein</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Support</h4>
+                            <a href="kontakt.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a>
+                            <a href="login.html"><i class="fas fa-angle-right me-2"></i> Konto Erstellen</a>
+                            <a href="kundenbewertung.html"><i class="fas fa-angle-right me-2"></i> Kundenbewertung</a>
+                            <a href="standardregelung.html"><i class="fas fa-angle-right me-2"></i> Standardregelung</a>
+                            <a href="gultigkeit.html"><i class="fas fa-angle-right me-2"></i> Gültiger Führerschein</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Geschäftsbedingungen</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-12">
+                                    <form id="lang-form">
+                                        <div class="form-floating">
+                                            <select class="form-select bg-dark border" id="lang-select">
+                                                <option value="1">Deutsch</option>
+                                                <option value="2">English</option>
+                                                <option value="3">Spanish</option>
+                                                <option value="3">Arabic</option>
+                                            </select>
+                                            <label for="select1">Sprache Wählen</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-3">Payments</h4>
+                            <div class="footer-bank-card">
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
 
     <!-- Load jQuery locally -->
     <script src="js/jquery.min.js"></script>

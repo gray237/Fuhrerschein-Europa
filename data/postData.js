@@ -5,7 +5,7 @@ window.POSTS = [
     title: "Voraussetzungen für einen EU-Führerschein",
     author: "Führerschein Europa",
     date: "2025-07-28",
-    image: "img/führerschein-prüfungen-die-besten.jpg",
+    image: "img/fuhrerschein-prufungen-die-besten.jpg",
     excerpt:
       "Ein Führerschein kann sehr nützlich sein. Besonders für diejenigen, die in einem Dorf oder einer abgelegenen Kleinstadt ohne ausreichenden...",
     content: `
@@ -123,7 +123,7 @@ window.POSTS = [
     title: "Führerscheinerneuerung in einem anderen EU-Land",
     author: "Führerschein Europa",
     date: "2025-08-10",
-    image: "img/führerschein-erneuerung.jpg",
+    image: "img/fuhrerschein-erneuerung.jpg",
     excerpt:
       "Wenn Sie in ein anderes EU-Land ziehen und Ihr Führerschein abläuft, müssen Sie ihn dort erneuern, sofern sich dort Ihr gewöhnlicher...",
     content: `
@@ -172,7 +172,7 @@ window.POSTS = [
     title: "Führerscheinumtausch und -anerkennung in der EU",
     author: "Führerschein Europa",
     date: "2025-08-15",
-    image: "img/führerschein-umtausch.jpg",
+    image: "img/fuhrerschein-umtausch.jpg",
     excerpt:
       "Sie können immer nur einen EU-Führerschein gleichzeitig besitzen. Wenn Sie in ein anderes EU-Land umziehen, müssen Sie Ihren Führerschein...",
     content: `
@@ -357,7 +357,7 @@ window.POSTS = [
     title: "Wann Benötigen Sie einen Deutschen Führerschein?",
     author: "Führerschein Europa",
     date: "2025-08-10",
-    image: "img/deutschen-führerschein-fahrschule.jpg",
+    image: "img/deutschen-fuhrerschein-fahrschule.jpg",
     excerpt:
       "Wenn Sie bereits einen gültigen Führerschein aus einem anderen Land besitzen, hängt die Gültigkeit in Deutschland davon ab, wo dieser...",
     content: `
@@ -412,7 +412,7 @@ window.POSTS = [
     title: "Wie viel kostet ein Führerschein in Deutschland?",
     author: "Führerschein Europa",
     date: "2025-08-10",
-    image: "img/eu-führerschein-kosten.jpg",
+    image: "img/eu-fuhrerschein-kosten.jpg",
     excerpt:
       "Einen deutschen Führerschein zu erwerben ist teuer, besonders wenn Sie keine gegenseitige Anerkennung (Reciprocity) haben und eine...",
     content: `
@@ -496,90 +496,7 @@ window.POSTS = [
     title: "Führerschein und Versicherungsanmeldung",
     author: "Führerschein Europa",
     date: "2025-08-10",
-    image: "img/deutschen-führerschein-und-versicherung.jpg",
-    excerpt:
-      "Wenn Sie in einem anderen EU-Land mit dem Auto unterwegs sind, stellen Sie sicher, dass Ihr Führerschein und Ihre Kfz-Versicherung...",
-    content: `
-      <p>
-        Wenn Sie in einem anderen EU-Land mit dem Auto unterwegs sind, stellen Sie sicher, dass Ihr Führerschein und Ihre Kfz-Versicherung in den Ländern, die Sie besuchen, gültig sind.
-    </p>
-
-    <h5>Anerkennung und Gültigkeit von Führerscheinen</h5>
-
-    <h6>EU-Führerscheine</h6>
-    <p>
-        Wenn Ihr Führerschein in einem EU-Land ausgestellt wurde, können Sie ihn überall in der EU verwenden.
-    </p>
-    <p>
-        Stellen Sie vor Reisen ins Ausland sicher, dass Ihr Führerschein noch gültig ist. Wenn Ihr Führerschein während einer Auslandsreise abläuft, wird er automatisch ungültig und kann in anderen Ländern nicht anerkannt werden.
-    </p>
-    <p>
-        Beachten Sie, dass Sie mit einem vorläufigen Führerschein oder Zertifikat nicht in einem anderen Land fahren dürfen.
-    </p>
-
-    <h6>Standardformat</h6>
-    <p>
-        Seit 2013 haben alle in der EU ausgestellten Führerscheine ein Standardformat – eine Plastikkarte in Kreditkartengröße mit besseren Sicherheitsmerkmalen.
-    </p>
-    <p>
-        Sie können Ihren alten Führerschein weiterhin verwenden, aber beim Erneuern wird er in das neue Format umgewandelt (spätestens bis 2033).
-    </p>
-    <p>
-        Folgende Führerscheinkategorien werden in ganz Europa anerkannt: AM, A1, A2, A, B, BE, B1, C1, C1E, C, CE, D1, D1E, D und DE.
-    </p>
-
-    <div class="my-3" style="background-color: #e7ebf2; color: #11306f; border-radius: 0.25rem; padding: 1rem; display: flex; gap: 0.5rem; align-items: flex-start;">
-        <i class="fas fa-exclamation-triangle me-2"></i>
-        <div>
-            <strong>Teenager:</strong> Beachten Sie, dass in einigen EU-Ländern unterschiedliche Altersbeschränkungen für bestimmte Fahrzeugkategorien gelten.
-        </div>
-    </div>
-
-    <h6>Beispielgeschichte</h6>
-    <p>
-        Sofia ist 14 Jahre alt und hat in Italien ihren Mopedführerschein erhalten. Sie möchte in Belgien ein Moped fahren, aber das Mindestalter für Mopeds beträgt dort 16 Jahre.
-    </p>
-    <p>
-        Sofia muss warten, bis sie 16 ist, bevor sie ihr Moped in Belgien legal fahren darf, ohne eine belgische Fahrprüfung ablegen zu müssen.
-    </p>
-
-    <h6>EU-Führerscheine, die im Austausch für einen Nicht-EU-Führerschein ausgestellt wurden</h6>
-    <p>
-        Wenn Sie Ihren Nicht-EU-Führerschein gegen einen EU-Führerschein in Ihrem Wohnsitzland getauscht haben, können Sie damit in der gesamten EU fahren.
-    </p>
-
-    <h6>Nicht-EU-Führerscheine</h6>
-    <p>
-        Wenn Sie in der EU mit einem Führerschein fahren möchten, der außerhalb der EU ausgestellt wurde, wenden Sie sich an die Behörden des Landes, das Sie besuchen, oder an Ihre Botschaft oder Ihr Konsulat in diesem Land.
-    </p>
-
-    <h6>Verlorener oder gestohlener Führerschein</h6>
-    <p>
-        Wenn Ihr Führerschein während einer Auslandsreise verloren geht oder gestohlen wird, wenden Sie sich an die örtliche Polizei und Ihr Konsulat oder Ihre Botschaft, um den Vorfall zu melden.
-    </p>
-    <p>
-        Ihr Konsulat kontaktiert die nationalen Behörden, die Ihren Führerschein ausgestellt haben (um zu prüfen, dass er nicht eingeschränkt, ausgesetzt, annulliert oder entzogen wurde).
-    </p>
-    <p>
-        Auf Grundlage der vom Konsulat erhaltenen Informationen kann die Polizei ein vorläufiges Dokument ausstellen, das es Ihnen erlaubt, in diesem Land für einen begrenzten Zeitraum zu fahren.
-    </p>
-    <p>
-        Einen Ersatzführerschein können Sie nur in dem Land beantragen, in dem Sie Ihren gewöhnlichen Wohnsitz haben.
-    </p>
-    <p>
-        Vorläufige Führerscheine und Zertifikate, die temporär zur Ersetzung verlorener oder gestohlener Führerscheine ausgestellt werden, werden in anderen EU-Ländern nicht automatisch anerkannt.
-    </p>
-    `,
-    likes: 24,
-    comments: [],
-    tags: ["Führerschein und Auto anmelden", "Kfz-Versicherung Deutschland", "Auto anmelden mit Führerschein", "Fahrzeuganmeldung und Versicherung", "Versicherung für Neuwagen Führerschein", "Autoversicherung für Führerscheinbesitzer"]
-  },
-  {
-    id: 6,
-    title: "Führerschein und Versicherungsanmeldung",
-    author: "Führerschein Europa",
-    date: "2025-08-10",
-    image: "img/deutschen-führerschein-und-versicherung.jpg",
+    image: "img/deutschen-fuhrerschein-und-versicherung.jpg",
     excerpt:
       "Wenn Sie in einem anderen EU-Land mit dem Auto unterwegs sind, stellen Sie sicher, dass Ihr Führerschein und Ihre Kfz-Versicherung...",
     content: `
