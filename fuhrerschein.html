@@ -78,7 +78,7 @@
                                 <a href="mpu-drogen.html" class="dropdown-item">MPU Drogen</a>
                                 <a href="mpu-alkohol.html" class="dropdown-item">MPU Alkohol</a>
                                 <a href="mpu-delikte.html" class="dropdown-item">MPU-Delikte</a>
-                                <a href="sperrfristverkürzung.html" class="dropdown-item">Sperrfristverkürzung</a>
+                                <a href="sperrfristverkurzung.html" class="dropdown-item">Sperrfristverkürzung</a>
                                 <a href="abstinenznachweis.html" class="dropdown-item">Abstinenznachweis</a>
                             </div>
                         </div>
@@ -352,47 +352,71 @@
                     <h5 class="section-title px-3">Beschleunigter Führerschein (2 Wochen)</h5>
                     <h1 class="mb-0">Biometrische Daten übermitteln</h1>
                 </div>
-                <div class="row g-5 align-items-start justify-content-center">
+            <div class="row g-5 align-items-start justify-content-center">
 
             <!-- Left Column: Front/Form -->
             <div class="col-lg-6 d-flex justify-content-center">
                 <div class="id-card-container">
 
-                <!-- Front card -->
-                <img src="img/eu_fe_vorne_jpg_en.jpg" alt="ID Card Front" class="front-card-img" style="width:597px; height:377px; border-radius:10px;">
+            <!-- Front card -->
+            <div id="id-card-preview" style="position:relative; display:inline-block;">
+                <img src="img/eu_fe_vorne_jpg_en.jpg" alt="ID Card Front" 
+                    style="width:597px; height:377px; border-radius:10px;">
 
                 <!-- Overlay Inputs -->
-                <input type="text" placeholder="Vorname" class="id-input name">
-                <input type="text" placeholder="Nachname" class="id-input nachname">
-                <input type="text" placeholder="Geburtsdatum" class="id-input geburtstag">
-                <input type="text" placeholder="Geburtsort" class="id-input geburtsort">
-                <input type="text" placeholder="Bestelldatum" class="id-input bestelldatum">
+                <span class="id-text name" style="position:absolute; top:60px; left:120px; font-size:14px;"></span>
+                <span class="id-text nachname" style="position:absolute; top:90px; left:120px; font-size:14px;"></span>
+                <span class="id-text geburtstag" style="position:absolute; top:120px; left:120px; font-size:14px;"></span>
+                <span class="id-text geburtsort" style="position:absolute; top:150px; left:120px; font-size:14px;"></span>
+                <span class="id-text bestelldatum" style="position:absolute; top:180px; left:120px; font-size:14px;"></span>
 
-                <!-- Photo Upload -->
-                <div class="photo-wrapper">
+                <!-- Photo -->
+                <img id="photo-preview" src="" alt="Foto 35x45mm"
+                    style="position:absolute; top:100px; right:60px; width:145px; height:180px; border-radius:4px; object-fit:cover;">
+
+                <!-- Signature -->
+                <img id="signature-preview" src="" alt="Unterschrift "
+                    style="position:absolute; bottom:100px; left:180px; width:210px; height:130px; object-fit:contain;">
+            </div>
+
+            <!-- Input Fields -->
+            <input type="text" placeholder="Vorname" class="id-input name">
+            <input type="text" placeholder="Nachname" class="id-input nachname">
+            <input type="text" placeholder="Geb.dat." class="id-input geburtstag">
+            <input type="text" placeholder="Ort" class="id-input geburtsort">
+            <input type="text" placeholder="Bestelld." class="id-input bestelldatum">
+
+            <!-- Uploads -->
+            <div class="photo-wrapper">
                 <input type="file" class="photo-upload" accept="image/*">
-                <img id="photo-preview" src="" alt="Foto Vorschau">
-                </div>
-
-                <!-- Signature Upload -->
-                <div class="signature-wrapper">
+            </div>
+            <div class="signature-wrapper">
                 <input type="file" class="signature-upload" accept="image/*">
-                <img id="signature-preview" src="" alt="Unterschrift Vorschau">
-                </div>
+            </div>
 
-
-                <!-- Submit & Download -->
-                <button id="submit-id" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4"
-                style="position:absolute; bottom:10px; left:400px; padding:6px 12px;">
+            <!-- Submit -->
+            <button id="submit-id" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4"
+                    style="position:absolute; bottom:10px; left:400px; padding:6px 12px;">
                 Absenden
-                </button>
-                <button id="download-id" class="btn btn-success rounded-pill py-6 px-4 ms-lg-4"
-                style="position:absolute; bottom:10px; left:20px; padding:6px 12px;">
-                Muster-ID Probe
-                </button>
+            </button>
+
+            </div>
+
+            <!-- Popup Modal -->
+            <div id="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+                background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
+            <div style="background:#fff; padding:20px; border-radius:10px; text-align:center; position:relative;">
+                <canvas id="idCanvas" width="597" height="377" style="border-radius:10px;"></canvas>
+                <br>
+                <a id="downloadLink" download="id-sample.png" class="btn btn-success">Herunterladen</a>
+    <a href="https://t.me/YourTelegramUsername" target="_blank" class="btn btn-info">Kontakt per Telegram</a>
+                <br><br>
+                <button onclick="document.getElementById('popup').style.display='none'" 
+                        class="btn btn-danger">Schließen</button>
+            </div>
+            </div>
 
 
-                </div>
             </div>
 
             <!-- RIGHT COLUMN (ACCORDION) -->
@@ -513,7 +537,7 @@
                     
                     <!-- IMAGE BELOW FIRST DIV -->
                         <div>
-                        <img src="img/neuer-fuehrerschein-kostet.jpg" alt="Führerschein Kosten Überblick" class="img-fluid rounded shadow-sm w-100">
+                        <img src="img/neuer-fuhrerschein-kostet.jpg" alt="Führerschein Kosten Überblick" class="img-fluid rounded shadow-sm w-100">
                         </div>
                     </div>
                 </div>
@@ -772,7 +796,7 @@
         <div class="container-fluid guide py-5">
             <div class="container">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Travel Guide</h5>
+                    <h5 class="section-title px-3">Ihr Weg zur erfolgreichen Führerscheinprüfung</h5>
                     <h1 class="mb-0">Lernen Sie unsere Fahrer kennen</h1>
                 </div>
                 <div class="row g-4">

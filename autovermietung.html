@@ -78,7 +78,7 @@
                                 <a href="mpu-drogen.html" class="dropdown-item">MPU Drogen</a>
                                 <a href="mpu-alkohol.html" class="dropdown-item">MPU Alkohol</a>
                                 <a href="mpu-delikte.html" class="dropdown-item">MPU-Delikte</a>
-                                <a href="sperrfristverkürzung.html" class="dropdown-item">Sperrfristverkürzung</a>
+                                <a href="sperrfristverkurzung.html" class="dropdown-item">Sperrfristverkürzung</a>
                                 <a href="abstinenznachweis.html" class="dropdown-item">Abstinenznachweis</a>
                             </div>
                         </div>
@@ -123,6 +123,38 @@
         </div>
         <!-- Header End -->
 
+         
+        <!-- Supplier Logos Section Start -->
+        <div class="container-fluid supplier-section position-relative">
+        <div class="container">
+            <div class="supplier-row d-flex flex-wrap align-items-center justify-content-between">
+            
+            <!-- Logos (8 items) -->
+            <div class="d-flex flex-wrap supplier-logos">
+                <img src="img/alamo.png" alt="Alamo Rental Car" class="logo-img">
+                <img src="img/avis.png" alt="Avis Car Rental" class="logo-img">
+                <img src="img/budget.png" alt="Budget Rental Car" class="logo-img">
+                <img src="img/dollar.png" alt="Dollar Car Rental" class="logo-img">
+                <img src="img/europcar.png" alt="Europcar" class="logo-img">
+                <img src="img/hertz.png" alt="Hertz" class="logo-img">
+                <img src="img/national.png" alt="National Car Rental" class="logo-img">
+                <img src="img/sixt.png" alt="Sixt Rent a Car" class="logo-img">
+            </div>
+
+            <!-- Main Image -->
+            <div class="supplier-image">
+                <img src="img/car_hero.png" 
+                    alt="Car Rentals Worldwide" 
+                    class="img-fluid supplier-main-img">
+            </div>
+
+            </div>
+        </div>
+        </div>
+        <!-- Supplier Logos Section End -->
+
+
+
         <!-- Tour Booking Start -->
         <div class="container-fluid booking py-5">
             <div class="container py-5">
@@ -142,68 +174,89 @@
                     </div>
                     <div class="col-lg-6">
                         <p class="text-white mb-4">Geben Sie einfach Ihre Reisedaten im Formular unten ein und <span class="text-warning">reservieren Sie Ihr Auto noch heute.</span>  Fahren Sie mit dem guten Gefühl, dass Ihre Buchung gesichert ist und Ihr Fahrzeug bei Ankunft bereitsteht.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-white border-0" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-white border-0" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
-                                        </select>
-                                        <label for="select1">Destination</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="SelectPerson">
-                                            <option value="1">Persons 1</option>
-                                            <option value="2">Persons 2</option>
-                                            <option value="3">Persons 3</option>
-                                        </select>
-                                        <label for="SelectPerson">Persons</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="CategoriesSelect">
-                                            <option value="1">Kids</option>
-                                            <option value="2">1</option>
-                                            <option value="3">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                        <label for="CategoriesSelect">Categories</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control bg-white border-0" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
-                                </div>
+                        <form id="carRentalForm" name="car-rental" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="car-rental">
+                        <p class="hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-white border-0" name="name" placeholder="Your Name" required>
+                                <label for="name">Ihr Name</label>
                             </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control bg-white border-0" name="email" placeholder="Your Email" required>
+                                <label for="email">Ihre E-Mail</label>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating date">
+                                <input type="text" class="form-control bg-white border-0" name="datetime" placeholder="Date & Time" required>
+                                <label for="datetime">Abholdatum und -uhrzeit</label>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select bg-white border-0" name="destination" required>
+                                <option value="Munich">Munich</option>
+                                <option value="Hamburg">Hamburg</option>
+                                <option value="Berlin">Berlin</option>
+                                <option value="Frankfurt">Frankfurt</option>
+                                <option value="Cologne">Cologne</option>
+                                <option value="Düsseldorf">Düsseldorf</option>
+                                </select>
+                                <label for="select1">Ziel</label>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select bg-white border-0" name="persons" required>
+                                <option value="1 Person">1 Person</option>
+                                <option value="2 Personen">2 Personen</option>
+                                <option value="3 Personen">3 Personen</option>
+                                <option value="4 Personen">4 Personen</option>
+                                </select>
+                                <label for="SelectPerson">Personen</label>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select bg-white border-0" name="children">
+                                <option value="1 Kind">1 Kind</option>
+                                <option value="2 Kinder">2 Kinder</option>
+                                <option value="3 Kinder">3 Kinder</option>
+                                <option value="4 Kinder">4 Kinder</option>
+                                </select>
+                                <label for="CategoriesSelect">Kinder</label>
+                            </div>
+                            </div>
+                            <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control bg-white border-0" name="message" placeholder="Sonderwunsch" style="height: 100px"></textarea>
+                                <label for="message">Sonderwunsch</label>
+                            </div>
+                            </div>
+                            <div class="col-12">
+                            <button class="btn btn-primary text-white w-100 py-3" type="submit">Jetzt Buchen</button>
+                            </div>
+                        </div>
                         </form>
+
+                        <!-- Modal -->
+                        <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <img src="img/car_hero.png" alt="Booking Confirmed" class="modal-img">
+                            <h3>Vielen Dank!</h3>
+                            <p>Ihre Buchung wurde erfolgreich gesendet. Wir werden uns bald bei Ihnen melden.</p>
+                        </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -239,314 +292,192 @@
 
         <!-- Specification End -->
 
+        <!-- Car Rental Germany Section Start -->
+        <section class="car-rental-section">
+        <div class="car-rental-container py-5">
+            <div class="car-rental-grid">
+            
+            <!-- Text (2/3) -->
+            <div class="car-rental-text">
+                <h2>Autovermietung Deutschland</h2>
+                <h5 class="section-title px-3">Kostenlose Stornierungen für Ihre Miete</h5>
+                <p>
+                Mit einer Autovermietung in Deutschland steht Ihnen das ganze Land zur Erkundung offen. 
+                Übernehmen Sie Ihren Mietwagen direkt am Flughafen München, am Flughafen Frankfurt am Main 
+                oder am Münchner Hauptbahnhof – Auto Europe bietet zahlreiche praktische Abhol- und 
+                Rückgabestationen in ganz Deutschland. Mit den Schlüsseln in der Hand geht es auf die berühmte 
+                Autobahn – für ein unvergessliches Erlebnis auf dem weltweit bekanntesten Straßennetz. 
+                Deutschland ist ein Land voller Traditionen, und wenn Sie ein Auto mieten und Europa in Ihrem 
+                eigenen Tempo entdecken, können Sie tief in die lokale Kultur eintauchen.
+                </p>
+                <p>
+                Ob geschäftlich nach Frankfurt oder zum Oktoberfest nach München – mit einer Autovermietung in 
+                Deutschland können Sie nicht nur die Städte, sondern auch die wunderschöne Landschaft dieses 
+                einzigartigen Landes erleben. Bei Auto Europe können Reisende jetzt Flug, Hotel und Mietwagen 
+                zu günstigen Reisepaketen kombinieren und noch mehr sparen. Beginnen Sie Ihr Abenteuer heute 
+                und fordern Sie ein kostenloses Angebot für einen Mietwagen in Deutschland an – unsere 
+                günstigen Preise werden Sie überraschen!
+                </p>
+            </div>
+
+            <!-- Image (1/3) -->
+            <div class="car-rental-image">
+                <img src="img/frankfurt-rental.jpg" alt="Autovermietung Deutschland" />
+            </div>
+
+            </div>
+        </div>
+        </section>
+        <!-- Car Rental Germany Section End -->
+
+
         <!-- Gallery Start -->
         <div class="container-fluid gallery my-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Autosammlung</h5>
-                <h1 class="mb-4">Economy- bis Luxuswagen</h1>
+            <div class="mx-auto text-center py-5" style="max-width: 900px;">
+                <h5 class="section-title px-3">Startorte für Ihre Reise in Deutschland</h5>
+                <h1 class="mb-4">Autoabholstationen</h1>
             </div>
-            <div class="tab-class text-center">
-                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#GalleryTab-1">
-                            <span class="text-dark" style="width: 150px;">All</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-2">
-                            <span class="text-dark" style="width: 150px;">World tour</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-3">
-                            <span class="text-dark" style="width: 150px;">Ocean Tour</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-4">
-                            <span class="text-dark" style="width: 150px;">Summer Tour</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-5">
-                            <span class="text-dark" style="width: 150px;">Sport Tour</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+            <div class="row g-2">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-1.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/koln-mietwagen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-1.jpg" data-lightbox="gallery-1" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/koln-mietwagen.jpg" data-lightbox="gallery-1" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/berlin-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/berlin-autovermietung.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/stuttgart-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/stuttgart-autovermietung.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-4.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/frankfurt-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-4.jpg" data-lightbox="gallery-4" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/frankfurt-autovermietung.jpg" data-lightbox="gallery-4" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-5.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/dresden-mietwagen.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-5.jpg" data-lightbox="gallery-5" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/dresden-mietwagen.jpg" data-lightbox="gallery-5" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-6.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/nurnberg-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-6.jpg" data-lightbox="gallery-6" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/nurnberg-autovermietung.jpg" data-lightbox="gallery-6" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-7.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/berlin-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-7.jpg" data-lightbox="gallery-7" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/berlin-autovermietung.jpg" data-lightbox="gallery-7" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-8.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/leipzig-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-8.jpg" data-lightbox="gallery-8" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/leipzig-autovermietung.jpg" data-lightbox="gallery-8" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-9.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/hamburg-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-9.jpg" data-lightbox="gallery-9" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/hamburg-autovermietung.jpg" data-lightbox="gallery-9" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-10.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/dusseldorf-autovermietung.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <h6 class="text-white text-uppercase mb-2">Autofahren in Deutschland</h6>
+                                            <a href="kontakt.html" class="btn-hover text-white">Kontakt <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
-                                        <a href="img/gallery-10.jpg" data-lightbox="gallery-10" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
+                                        <a href="img/dusseldorf-autovermietung.jpg" data-lightbox="gallery-10" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-2" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-3" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-4" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-5" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Gallery End -->

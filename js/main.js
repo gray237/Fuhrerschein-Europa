@@ -99,77 +99,78 @@
 
 })(jQuery);
 
-// Live preview for photo
-const photoInput = document.querySelector('.photo-upload');
-const photoPreview = document.getElementById('photo-preview');
+// Map positions from your CSS
+const fieldMap = {
+  name:        { x: 177, y: 60 },   // adjusted baseline
+  nachname:    { x: 178, y: 104 },
+  geburtstag:  { x: 178, y: 127 },
+  geburtsort:  { x: 317, y: 127 },
+  bestelldatum:{ x: 178, y: 150 }
+};
 
-if (photoInput && photoPreview) {
-  photoInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      photoPreview.src = URL.createObjectURL(file);
-    }
-  });
-}
-
-// Live preview for signature
-const sigInput = document.querySelector('.signature-upload');
-const sigPreview = document.getElementById('signature-preview');
-
-if (sigInput && sigPreview) {
-  sigInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      sigPreview.src = URL.createObjectURL(file);
-    }
-  });
-}
-
-// Transparent input once filled
+// Toggle transparent background when filled
 document.querySelectorAll('.id-input').forEach(input => {
   input.addEventListener('input', () => {
-    if (input.value.trim() !== "") {
-      input.classList.add('filled');
-    } else {
-      input.classList.remove('filled');
-    }
+    input.classList.toggle('filled', input.value.trim() !== "");
   });
 });
 
-// Upload Fields
+// Upload preview
 function setupUpload(inputSelector, previewSelector) {
   const input = document.querySelector(inputSelector);
   const preview = document.querySelector(previewSelector);
-
   if (input && preview) {
     input.addEventListener('change', (e) => {
       const file = e.target.files[0];
-      if (file) {
-        preview.src = URL.createObjectURL(file);
-        input.style.display = "none"; // hide button after upload
-      }
+      if (file) preview.src = URL.createObjectURL(file);
     });
   }
 }
-
 setupUpload('.photo-upload', '#photo-preview');
 setupUpload('.signature-upload', '#signature-preview');
 
-// Submit button
+// Submit → generate popup
 const submitBtn = document.getElementById('submit-id');
 if (submitBtn) {
   submitBtn.addEventListener('click', () => {
-    const data = {
-      name: document.querySelector('.name')?.value || "",
-      nachname: document.querySelector('.nachname')?.value || "",
-      geburtsdatum: document.querySelector('.geburtstag')?.value || "",
-      geburtsort: document.querySelector('.geburtsort')?.value || "",
-      bestelldatum: document.querySelector('.bestelldatum')?.value || ""
+    const popup = document.getElementById('popup');
+    const canvas = document.getElementById('idCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const cardImg = new Image();
+    cardImg.src = "img/eu_fe_vorne_jpg_en.jpg";
+
+    cardImg.onload = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(cardImg, 0, 0, canvas.width, canvas.height);
+
+      // Match CSS font
+      ctx.font = "23px 'Courier New', monospace";
+      ctx.fillStyle = "#000";
+
+      // Draw each field only in popup
+      Object.keys(fieldMap).forEach(field => {
+        const el = document.querySelector(`.id-input.${field}`);
+        if (el && el.value) {
+          ctx.fillText(el.value, fieldMap[field].x, fieldMap[field].y);
+        }
+      });
+
+      // Add photo
+      const photo = document.getElementById('photo-preview');
+      if (photo && photo.src) ctx.drawImage(photo, 7, 100, 144, 181);
+
+      // Add signature
+      const sig = document.getElementById('signature-preview');
+      if (sig && sig.src) ctx.drawImage(sig, 180, 283, 200, 54);
+
+      // Download link
+      document.getElementById('downloadLink').href = canvas.toDataURL();
+      popup.style.display = "flex";
     };
-    console.log('Form Data:', data);
-    alert('ID card data submitted! Check console.');
   });
 }
+
 
 // Subscription Form Submission (Netlify + Popup)
 const subscribeForm = document.querySelector('form[name="subscribe"]');
@@ -260,5 +261,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Car Rental Form Submission (Netlify + Modal Popup)
+document.addEventListener("DOMContentLoaded", () => {
+  const carRentalForm = document.getElementById("carRentalForm");
+  const confirmationModal = document.getElementById("confirmationModal");
+  const modalClose = confirmationModal?.querySelector(".close");
+
+  if (carRentalForm && confirmationModal) {
+    carRentalForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(carRentalForm);
+
+      fetch("/", {
+        method: "POST",
+        body: formData
+      })
+      .then(() => {
+        carRentalForm.reset();
+        confirmationModal.style.display = "block";
+      })
+      .catch(() => {
+        alert("❌ Es gab ein Problem beim Absenden des Formulars. Bitte versuchen Sie es erneut.");
+      });
+    });
+  }
+
+  // Close modal when clicking X
+  if (modalClose) {
+    modalClose.addEventListener("click", () => {
+      confirmationModal.style.display = "none";
+    });
+  }
+
+  // Close modal when clicking outside
+  window.addEventListener("click", (event) => {
+    if (event.target === confirmationModal) {
+      confirmationModal.style.display = "none";
+    }
+  });
+});
+
+// Clickable Menu link
+document.addEventListener("DOMContentLoaded", function() {
+  // Fix dropdown parent links with href
+  document.querySelectorAll('.nav-link.dropdown-toggle').forEach(link => {
+    const href = link.getAttribute('href');
+    link.addEventListener('click', function(e) {
+      // Only navigate if clicked directly (not on toggling dropdown)
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+});
+
 
 
