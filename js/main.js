@@ -303,19 +303,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Clickable Menu link
-document.addEventListener("DOMContentLoaded", function() {
-  // Fix dropdown parent links with href
-  document.querySelectorAll('.nav-link.dropdown-toggle').forEach(link => {
-    const href = link.getAttribute('href');
-    link.addEventListener('click', function(e) {
-      // Only navigate if clicked directly (not on toggling dropdown)
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-});
-
 
 

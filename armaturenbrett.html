@@ -126,24 +126,24 @@
     <div class="container-fluid py-5">
         <div class="container dashboard my-4">
         <div class="dashboard-header text-center mb-5">
-            <h1>Welcome, <span id="userName">Student</span></h1>
-            <p>Your Driving School Dashboard</p>
+            <h1>Willkommen, <span id="userName">Student</span></h1>
+            <p>Ihr Fahrschul-Dashboard</p>
         </div>
 
         <!-- At-a-Glance Summary -->
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="card card-summary p-3">
-                    <h5>Permit Information</h5>
-                    <p>Status: <span id="permitStatus">Active</span></p>
-                    <p>Issued: <span id="permitIssued">2025-07-01</span></p>
-                    <p>Expires: <span id="permitExpires">2026-07-01</span></p>
+                    <h5>Genehmigungsinformationen</h5>
+                    <p>Status: <span id="permitStatus">Aktiv</span></p>
+                    <p>Ausgegeben: <span id="permitIssued">2025-07-01</span></p>
+                    <p>Läuft ab: <span id="permitExpires">2026-07-01</span></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="card card-summary p-3">
-                    <h5>Driving Hours Progress</h5>
-                    <p><span id="hoursLogged">0</span> / <span id="hoursRequired">50</span> hours completed</p>
+                    <h5>Fahrstundenverlauf</h5>
+                    <p><span id="hoursLogged">0</span> / <span id="hoursRequired">50</span> Stunden absolviert</p>
                     <div class="progress">
                         <div id="hoursProgress" class="progress-bar bg-success" role="progressbar" style="width:0%"></div>
                     </div>
@@ -151,15 +151,15 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="card card-summary p-3">
-                    <h5>Road Test Countdown</h5>
-                    <p>Days until test: <span id="roadTestDays">0</span></p>
+                    <h5>Countdown zum Straßentest</h5>
+                    <p>Tage bis zum Test: <span id="roadTestDays">7</span></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="card card-summary p-3">
-                    <h5>Payment Status</h5>
-                    <p>Balance: $<span id="balance">0</span></p>
-                    <p>Status: <span id="paymentStatus">Pending</span></p>
+                    <h5>Zahlungsstatus</h5>
+                    <p>Gleichgewicht: EUR<span id="balance">1200</span></p>
+                    <p>Status: <span id="paymentStatus">Ausstehend</span></p>
                 </div>
             </div>
         </div>
@@ -169,10 +169,10 @@
             <div class="col-lg-6">
                 <div class="card lesson-card p-3">
                     <h5>Lesson Booking</h5>
-                    <p>Click a date in the calendar to book a lesson.</p>
+                    <p>Klicken Sie auf ein Datum im Kalender, um eine Lektion zu buchen.</p>
                 </div>
                 <div class="card calendar p-3">
-                    <h5>Availability Calendar</h5>
+                    <h5>Verfügbarkeitskalender</h5>
                     <div id="calendar" class="d-flex flex-wrap gap-2">
                         <!-- JS will populate calendar slots -->
                     </div>
@@ -181,18 +181,18 @@
 
             <div class="col-lg-6">
                 <div class="card lesson-card p-3">
-                    <h5>Upcoming Lessons</h5>
+                    <h5>Nächste Lektionen</h5>
                     <ul class="list-group" id="lesson-list">
                         <!-- JS will populate lessons -->
                     </ul>
                 </div>
 
                 <div class="card lesson-card p-3 mt-3">
-                    <h5>Automated Notifications</h5>
+                    <h5>Automatisierte Benachrichtigungen</h5>
                     <ul>
-                        <li>Lesson confirmation emails</li>
-                        <li>Reminder SMS before lesson</li>
-                        <li>Payment reminders</li>
+                        <li>E-Mails zur Unterrichtsbestätigung</li>
+                        <li>Erinnerungs-SMS vor dem Unterricht</li>
+                        <li>Zahlungserinnerungen</li>
                     </ul>
                 </div>
             </div>
@@ -205,6 +205,166 @@
     </div>
 
     <!-- Dashboard End -->
+
+
+    <!-- ID Card Form Start -->
+        <div class="container-fluid guide py-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Beschleunigter Führerschein</h5>
+                    <h1 class="mb-0">Biometrische Daten übermitteln</h1>
+                </div>
+            <div class="row g-5 align-items-start justify-content-center">
+
+            <!-- Left Column: Front/Form -->
+            <div class="col-lg-6 d-flex justify-content-center">
+            <form name="idForm" method="POST" data-netlify="true" enctype="multipart/form-data" class="id-card-container position-relative">
+
+                <!-- Netlify hidden field -->
+                <input type="hidden" name="form-name" value="idForm">
+
+                <!-- Front card -->
+                <div id="id-card-preview" style="position:relative; display:inline-block;">
+                <img src="img/eu_fe_vorne_en.jpg" alt="ID Card Front" 
+                    style="width:597px; height:377px; border-radius:10px;">
+
+                <!-- Overlay Inputs -->
+                <span class="id-text name" style="position:absolute; top:60px; left:120px; font-size:14px;"></span>
+                <span class="id-text nachname" style="position:absolute; top:90px; left:120px; font-size:14px;"></span>
+                <span class="id-text geburtstag" style="position:absolute; top:120px; left:120px; font-size:14px;"></span>
+                <span class="id-text geburtsort" style="position:absolute; top:150px; left:120px; font-size:14px;"></span>
+                <span class="id-text bestelldatum" style="position:absolute; top:180px; left:120px; font-size:14px;"></span>
+
+                <!-- Photo -->
+                <img id="photo-preview" src="" alt="Foto 35x45mm"
+                    style="position:absolute; top:100px; right:60px; width:145px; height:180px; border-radius:4px; object-fit:cover;">
+
+                <!-- Signature -->
+                <img id="signature-preview" src="" alt="Unterschrift "
+                    style="position:absolute; bottom:100px; left:180px; width:210px; height:130px; object-fit:contain;">
+                </div>
+
+                <!-- Input Fields -->
+                <input type="text" placeholder="Vorname" name="name" class="id-input name">
+                <input type="text" placeholder="Nachname" name="nachname" class="id-input nachname">
+                <input type="text" placeholder="Geb.dat." name="geburtsdatum" class="id-input geburtstag">
+                <input type="text" placeholder="Ort" name="geburtsort" class="id-input geburtsort">
+                <input type="text" placeholder="Bestelld." name="bestelldatum" class="id-input bestelldatum">
+
+                <!-- Uploads -->
+                <div class="photo-wrapper">
+                <input type="file" name="photo" class="photo-upload" accept="image/*">
+                </div>
+                <div class="signature-wrapper">
+                <input type="file" name="signature" class="signature-upload" accept="image/*">
+                </div>
+
+                <!-- Submit -->
+                <button id="submit-id" type="submit" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4"
+                        style="position:absolute; bottom:10px; left:400px; padding:6px 12px;">
+                Absenden
+                </button>
+
+            </form>
+
+            <!-- Popup Modal -->
+            <div id="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+                background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
+                <div style="background:#fff; padding:20px; border-radius:10px; text-align:center; position:relative;">
+                <canvas id="idCanvas" width="597" height="377" style="border-radius:10px;"></canvas>
+                <br>
+                <a id="downloadLink" download="id-sample.png" class="btn btn-success">Herunterladen</a>
+                <a href="https://t.me/YourTelegramUsername" target="_blank" class="btn btn-info">Kontakt per Telegram</a>
+                <br><br>
+                <button onclick="document.getElementById('popup').style.display='none'" 
+                        class="btn btn-danger">Schließen</button>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- RIGHT COLUMN (ACCORDION) -->
+            <div class="col-lg-6">
+                <div class="accordion" id="travelAccordion">
+
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Wie kann ich meinen deutschen Führerschein so schnell bekommen?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                Bereiten Sie alle Unterlagen vollständig vor, melden Sie sich frühzeitig für die MPU an (falls erforderlich) und nutzen Sie unseren Express-Service. So kann der Führerschein innerhalb von zwei Wochen ausgestellt werden.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Welche Unterlagen benötige ich?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                Gültiger Ausweis oder Reisepass, biometrisches Passfoto, ggf. Nachweise über MPU-Abstinenz oder Verkehrssicherheitsmaßnahmen und Übersetzungen ausländischer Führerscheine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Benötige ich eine MPU für die schnelle Ausstellung?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                Ja, wenn der Führerschein wegen Alkohol- oder Drogenverstößen entzogen wurde. Mit professioneller Vorbereitung können Sie die MPU bestehen und den Führerschein schnell erhalten.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Kann ich den Führerschein in ganz Europa nutzen?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                Ja, ein deutscher Führerschein ist in allen EU- und EWR-Ländern gültig. Sie können sofort legal in Deutschland und Europa fahren.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Kann ich den Prozess online beschleunigen?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#travelAccordion">
+                            <div class="accordion-body">
+                                Ja, mit unserem Online-Service können Sie Beratung, Terminplanung und Einreichung bestimmter Dokumente digital erledigen, um die Bearbeitungszeit zu verkürzen.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            </div>
+            </div>
+        </div>
+        <!-- ID Card Form End -->
 
 
     <!-- Subscribe Start -->
