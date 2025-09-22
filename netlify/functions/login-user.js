@@ -10,17 +10,22 @@ export async function handler(event) {
   const { email, password } = JSON.parse(event.body);
 
   try {
-    const response = await fetch(`${process.env.SUPABASE_URL}/rest/v1/users?email=eq.${email}`, {
-      method: "GET",
-      headers: {
-        apikey: process.env.SUPABASE_SERVICE_KEY,
-        Authorization: `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
-      },
-    });
+    // Fetch user by email
+    const response = await fetch(
+      `${process.env.SUPABASE_URL}/rest/v1/users?email=eq.${encodeURIComponent(email)}`,
+      {
+        method: "GET",
+        headers: {
+          apikey: process.env.SUPABASE_SERVICE_KEY,
+          Authorization: `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (!response.ok) {
       const error = await response.text();
-      return { statusCode: 500, body: error };
+      return { statusCode: response.status, body: error };
     }
 
     const users = await response.json();
@@ -37,12 +42,18 @@ export async function handler(event) {
       return { statusCode: 401, body: "Invalid credentials" };
     }
 
+    // Remove sensitive fields before sending back
+    const { password: _, ...safeUser } = user;
+
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Login successful", user }),
+      body: JSON.stringify({
+        message: "Login successful",
+        user: safeUser, // includes first_name, last_name, dob, city, state, courses, marketing, etc.
+      }),
     };
   } catch (err) {
-    console.error(err);
+    console.error("Login error:", err);
     return { statusCode: 500, body: "Error logging in" };
   }
 }
