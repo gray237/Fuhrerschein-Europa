@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Führerschein Europa - Konto Erstellen & Führerschein-Service Nutzen</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" type="image/png" href="img/fuhrerschein-europa-favicon.png">
     <meta content="Konto erstellen Führerschein Europa, Führerscheinservices EU, Führerschein Updates, Führerschein Beratung, Führerschein online, Führerschein EU, Führerschein Konto" name="keywords">
     <meta content="Erstellen Sie ein Konto bei Führerschein Europa, um Führerscheinservices, Updates und persönliche Beratung zu erhalten – einfach, schnell und sicher." name="description">
 
@@ -23,6 +24,12 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Flatpickr (datepicker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Tippy.js (tooltips) -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -123,63 +130,340 @@
 
     <!-- Login Start -->
     
-    <div class="container-fluid d-flex align-items-center justify-content-center min-vh-100 bg-light">
-    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
-        <h2 class="text-center mb-4">Willkommen bei DrivePro</h2>
+    <!-- Auth Container -->
+    <div class="container py-5">
+    <h2 class="text-center mb-4">Willkommen bei Führerschein Europa</h2>
 
-        <!-- Toggle Tabs -->
-        <ul class="nav nav-tabs mb-3" id="authTab" role="tablist">
-            <li class="nav-item w-50 text-center">
-                <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab">Login</a>
-            </li>
-            <li class="nav-item w-50 text-center">
-                <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab">Register</a>
-            </li>
-        </ul>
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-3 justify-content-center" id="authTab" role="tablist">
+        <li class="nav-item">
+        <a class="nav-link active" id="register-tab" data-bs-toggle="tab" href="#register" role="tab">
+            Registrieren
+        </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" id="login-tab" data-bs-toggle="tab" href="#login" role="tab">
+            Login
+        </a>
+        </li>
+    </ul>
 
-        <div class="tab-content" id="authTabContent">
-            <!-- Login Form -->
-            <div class="tab-pane fade show active" id="login" role="tabpanel">
-                <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="loginEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="loginEmail" required>
+    <!-- Tab Content -->
+    <div class="tab-content" id="authTabContent">
+
+        <!-- Register Tab -->
+        <div class="tab-pane fade show active" id="register" role="tabpanel">
+        <div class="container py-5">
+            <div class="mx-auto" style="max-width: 980px;">
+            <div class="wizard-card">
+                <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="step-pill active" id="pill-1">Standort</div>
+                    <div class="step-pill" id="pill-2">Persönlich</div>
+                    <div class="step-pill" id="pill-3">Konto</div>
+                    <div class="step-pill" id="pill-4">Auswahl</div>
+                    <div class="step-pill" id="pill-5">Überprüfen</div>
+                </div>
+                <div style="min-width:160px;">
+                    <div class="progress" style="height:10px;">
+                    <div id="wizard-progress" class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="mb-3">
-                        <label for="loginPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" required>
+                </div>
+                </div>
+
+                <!-- UPDATED FOR NETLIFY -->
+                <form id="registrationForm" name="registrationForm" method="POST" data-netlify="true" novalidate>
+                <input type="hidden" name="form-name" value="registrationForm">
+
+                <!-- STEP 1: Standort -->
+                <div class="wizard-step active" data-step="1">
+                    <h5 class="mb-3">1) Wähle deinen Standort</h5>
+                    <div class="row g-3 align-items-end">
+                    <div class="col-md-6">
+                        <label class="form-label">Bundesland / Stadt</label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="z. B. Berlin" required>
+                        <div class="invalid-feedback">Bitte Standort eingeben.</div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                </form>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Postleitzahl</label>
+                        <input type="text" class="form-control" id="zip" name="zip" placeholder="PLZ" inputmode="numeric" required>
+                        <div class="invalid-feedback">Bitte PLZ eingeben.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Fahrerfahrung</label>
+                        <select class="form-select" id="experience" name="experience">
+                        <option value="">Bitte wählen</option>
+                        <option value="anfanger">Anfänger</option>
+                        <option value="umsteiger">Umschreiber / Wechsel</option>
+                        <option value="aufsteiger">Fortgeschritten</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Wie hast du uns gefunden? 
+                        <i class="fa fa-info-circle ms-1 text-muted" data-tippy-content="z.B. Google, Empfehlung, Social"></i>
+                        </label>
+                        <input class="form-control" name="referrer" placeholder="Quelle (optional)">
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-end">
+                        <button type="button" class="btn btn-outline-secondary me-2" id="cancelBtn">Abbrechen</button>
+                        <button type="button" class="btn btn-primary" data-action="next">Weiter</button>
+                    </div>
+                    </div>
+                </div>
+
+            <!-- STEP 2: Persönlich -->
+            <div class="wizard-step" data-step="2">
+                <h5 class="mb-3">2) Persönliche Angaben</h5>
+                <div class="row g-3">
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Vorname" required>
+                    <label for="firstName">Vorname</label>
+                    <div class="invalid-feedback">Vorname erforderlich</div>
+                </div>
+
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nachname" required>
+                    <label for="lastName">Nachname</label>
+                    <div class="invalid-feedback">Nachname erforderlich</div>
+                </div>
+
+                <div class="col-md-6 form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required>
+                    <label for="email">E-Mail</label>
+                    <div class="invalid-feedback">Gültige E-Mail erforderlich</div>
+                </div>
+
+                <div class="col-md-6 form-floating">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon / WhatsApp" required>
+                    <label for="phone">Telefon / WhatsApp</label>
+                    <div class="invalid-feedback">Telefonnummer erforderlich</div>
+                </div>
+
+                <div class="col-md-6 form-floating">
+                    <input id="dob" name="dob" class="form-control" placeholder="Geburtsdatum" required>
+                    <label for="dob">Geburtsdatum</label>
+                    <div class="invalid-feedback">Geburtsdatum erforderlich</div>
+                </div>
+
+                <div class="col-md-6 form-floating">
+                    <select class="form-select" id="nationality" name="nationality" required>
+                    <option value="">Staatsangehörigkeit wählen</option>
+                    <option>Deutsch</option>
+                    <option>EU</option>
+                    <option>Andere</option>
+                    </select>
+                    <label for="nationality">Staatsangehörigkeit</label>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Adresse / Straße</label>
+                    <input class="form-control mb-2" id="street" name="street" placeholder="Musterstraße 1" required>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Stadt</label>
+                    <input class="form-control" id="addrCity" name="addrCity" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Bundesland</label>
+                    <input class="form-control" id="addrState" name="addrState">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Land</label>
+                    <input class="form-control" id="addrCountry" name="addrCountry" value="Deutschland">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Ausweis / Führerschein (optional)</label>
+                    <input type="file" accept="image/*,application/pdf" class="form-control" id="idUpload" name="idUpload">
+                    <div class="mt-2" id="idPreviewWrap" style="display:none;">
+                    <small class="text-muted">Vorschau:</small>
+                    <div class="mt-1">
+                        <img id="idPreview" class="file-preview rounded border" alt="Vorschau">
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-action="prev">Zurück</button>
+                    <button type="button" class="btn btn-primary" data-action="next">Weiter</button>
+                </div>
+                </div>
             </div>
 
-            <!-- Register Form -->
-            <div class="tab-pane fade" id="register" role="tabpanel">
-                <form id="registerForm">
-                    <div class="mb-3">
-                        <label for="regName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="regName" required>
+            <!-- STEP 3: Konto -->
+            <div class="wizard-step" data-step="3">
+                <h5 class="mb-3">3) Konto anlegen</h5>
+                <div class="row g-3">
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Wunschnutzername" required>
+                    <label for="username">Nutzername</label>
+                    <div class="invalid-feedback">Bitte Nutzername eingeben</div>
+                </div>
+
+                <div class="col-md-6 form-floating position-relative">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Passwort" required>
+                    <label for="password">Passwort</label>
+                    <button type="button" class="btn btn-sm btn-outline-secondary position-absolute top-50 end-0 translate-middle-y me-2" id="togglePassword" title="Anzeigen/Verbergen"><i class="fa fa-eye"></i></button>
+                    <div class="invalid-feedback">Bitte Passwort eingeben</div>
+                </div>
+
+                <div class="col-12">
+                    <div class="password-meter mb-2" aria-hidden="true"><span id="passwordBar"></span></div>
+                    <small id="passwordHint" class="text-muted">Mindestens 8 Zeichen. Verwende Groß-/Kleinbuchstaben, Zahlen & Symbole.</small>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agreeTerms" required>
+                    <label class="form-check-label" for="agreeTerms">
+                        Ich akzeptiere die <a href="#" target="_blank">Nutzungsbedingungen</a> und die <a href="#" target="_blank">Datenschutzrichtlinie</a>.
+                    </label>
+                    <div class="invalid-feedback">Sie müssen die Bedingungen akzeptieren.</div>
                     </div>
-                    <div class="mb-3">
-                        <label for="regEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="regEmail" required>
+                    <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" id="marketingOptIn" name="marketing">
+                    <label class="form-check-label" for="marketingOptIn">E-Mail-Angebote & Updates erhalten (optional)</label>
                     </div>
-                    <div class="mb-3">
-                        <label for="regPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="regPassword" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="regConfirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="regConfirmPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-success w-100">Register</button>
-                </form>
+                </div>
+
+                <div class="col-12 d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-action="prev">Zurück</button>
+                    <button type="button" class="btn btn-primary" data-action="next">Weiter</button>
+                </div>
+                </div>
             </div>
+
+            <!-- STEP 4: Kurs / Ausbildung Auswahl -->
+            <div class="wizard-step" data-step="4">
+                <h5 class="mb-3">4) Ausbildung & Kurse wählen</h5>
+                <p class="text-muted">Wähle mindestens eine Option (mehrere möglich).</p>
+
+                <div class="row g-3">
+                <!-- Course cards like in example -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-3 course-card h-100 rounded selected" data-value="B" tabindex="0">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                        <span class="icon-b-sport-class-circle fa-2x text-primary"><i class="fas fa-car"></i></span>
+                        </div>
+                        <div>
+                        <div class="fw-bold">Auto</div>
+                        <div class="text-muted small">Klasse B</div>
+                        </div>
+                        <div class="ms-auto form-check form-switch">
+                        <input class="form-check-input course-toggle" type="checkbox" checked>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-3 course-card h-100 rounded" data-value="A" tabindex="0">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                        <span class="icon-a-class-circle fa-2x text-secondary"><i class="fas fa-motorcycle"></i></span>
+                        </div>
+                        <div>
+                        <div class="fw-bold">Motorrad</div>
+                        <div class="text-muted small">Klasse A / A2 / A1</div>
+                        </div>
+                        <div class="ms-auto form-check form-switch">
+                        <input class="form-check-input course-toggle" type="checkbox">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-3 course-card h-100 rounded" data-value="C" tabindex="0">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                        <span class="icon-c-d-class-circle fa-2x text-secondary"><i class="fas fa-truck"></i></span>
+                        </div>
+                        <div>
+                        <div class="fw-bold">Berufskraftfahrer</div>
+                        <div class="text-muted small">LKW / C / CE</div>
+                        </div>
+                        <div class="ms-auto form-check form-switch">
+                        <input class="form-check-input course-toggle" type="checkbox">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-3 course-card h-100 rounded" data-value="BE" tabindex="0">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                        <span class="icon-t-forklift-class-circle fa-2x text-secondary"><i class="fas fa-hammer"></i></span>
+                        </div>
+                        <div>
+                        <div class="fw-bold">BE-Ausbildung</div>
+                        <div class="text-muted small">Anhänger</div>
+                        </div>
+                        <div class="ms-auto form-check form-switch">
+                        <input class="form-check-input course-toggle" type="checkbox">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-action="prev">Zurück</button>
+                    <button type="button" class="btn btn-primary" data-action="next">Überprüfen</button>
+                </div>
+                </div>
+            </div>
+
+            <!-- STEP 5: Review -->
+              <div class="wizard-step" data-step="5">
+                <h5 class="mb-3">5) Überprüfen & Bestätigen</h5>
+                <div id="reviewSection" class="mb-3">
+                  <!-- populated by JS -->
+                </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="confirmData" required>
+                  <label class="form-check-label" for="confirmData">Ich bestätige, dass die angegebenen Daten korrekt sind.</label>
+                  <div class="invalid-feedback">Bitte bestätigen Sie die Angaben.</div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-secondary" data-action="prev">Zurück</button>
+                  <button type="submit" class="btn btn-success">Registrierung abschließen</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-
-        <p class="text-center mt-3 text-muted">&copy; © 2025 Führerschein Europa Fahrschule</p>
+      </div>
     </div>
-</div>
+
+    <!-- Login Tab -->
+    <div class="tab-pane fade" id="login" role="tabpanel">
+
+        <!-- UPDATED FOR NETLIFY -->
+        <form id="loginForm" name="loginForm" method="POST" data-netlify="true" class="p-3">
+            <input type="hidden" name="form-name" value="loginForm">
+
+            <div class="mb-3">
+            <label for="loginEmail" class="form-label">E-Mail</label>
+            <input type="email" class="form-control" id="loginEmail" name="loginEmail" required>
+            </div>
+            <div class="mb-3">
+            <label for="loginPassword" class="form-label">Passwort</label>
+            <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        </div>
+    </div>
+    </div>
 
     <!-- Login End -->
 
@@ -310,20 +594,21 @@
         </div>
         <!-- Footer End -->
     
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright text-body py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center text-md-end mb-md-0">
-                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-start">
-                    Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="index.html">Führerschein Europa</a>, Alle Rechte vorbehalten.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        Design von <a class="text-white" href="#">Hybriid</a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Copyright End -->
+        <!-- Copyright End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>  
@@ -339,6 +624,13 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Flatpickr -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+   <!-- Tippy.js -->
+   <script src="https://unpkg.com/@popperjs/core@2"></script>
+   <script src="https://unpkg.com/tippy.js@6"></script>
     
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

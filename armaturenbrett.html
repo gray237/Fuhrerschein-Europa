@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Führerschein Europa - Fahrschul Dashboard für EU-Führerschein-Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" type="image/png" href="img/fuhrerschein-europa-favicon.png">
     <meta content="Fahrschul Dashboard Europa, Führerschein Europa Dashboard, EU Führerschein Services, Führerschein Kurse Europa, Fortschritt Führerschein, EU Führerschein Überblick, Führerschein Services" name="keywords">
     <meta content="Greifen Sie auf das Fahrschul Dashboard von Führerschein Europa zu: Überblick über Kurse, Fortschritte und persönliche Führerschein-Services für EU-Bürger." name="description">
 
@@ -23,6 +24,12 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Flatpickr (datepicker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Tippy.js (tooltips) -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -122,89 +129,173 @@
     <!-- Header End -->
 
     <!-- Dashboard Start -->
-    
-    <div class="container-fluid py-5">
-        <div class="container dashboard my-4">
-        <div class="dashboard-header text-center mb-5">
-            <h1>Willkommen, <span id="userName">Student</span></h1>
-            <p>Ihr Fahrschul-Dashboard</p>
+    <div class="container-fluid py-5 bg-light">
+    <div class="container dashboard">
+        
+        <!-- Welcome Header -->
+        <div class="text-center mb-5">
+        <h1 class="fw-bold">Willkommen, <span id="userName">Student</span></h1>
+        <p class="text-muted">Ihr Fahrschul-Dashboard</p>
         </div>
 
-        <!-- At-a-Glance Summary -->
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="card card-summary p-3">
-                    <h5>Genehmigungsinformationen</h5>
-                    <p>Status: <span id="permitStatus">Aktiv</span></p>
-                    <p>Ausgegeben: <span id="permitIssued">2025-07-01</span></p>
-                    <p>Läuft ab: <span id="permitExpires">2026-07-01</span></p>
-                </div>
+        <!-- At-a-Glance Summary Cards -->
+        <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-id-card fa-2x text-primary mb-2"></i>
+                <h6 class="card-title fw-bold">Führerschein Status</h6>
+                <p class="mb-0">Status: <span id="permitStatus">Aktiv</span></p>
+                <p class="mb-0"><small>Ausgestellt: <span id="permitIssued">2025-07-01</span></small></p>
+                <p class="mb-0"><small>Läuft ab: <span id="permitExpires">2026-07-01</span></small></p>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card card-summary p-3">
-                    <h5>Fahrstundenverlauf</h5>
-                    <p><span id="hoursLogged">0</span> / <span id="hoursRequired">50</span> Stunden absolviert</p>
-                    <div class="progress">
-                        <div id="hoursProgress" class="progress-bar bg-success" role="progressbar" style="width:0%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card card-summary p-3">
-                    <h5>Countdown zum Straßentest</h5>
-                    <p>Tage bis zum Test: <span id="roadTestDays">7</span></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card card-summary p-3">
-                    <h5>Zahlungsstatus</h5>
-                    <p>Gleichgewicht: EUR<span id="balance">1200</span></p>
-                    <p>Status: <span id="paymentStatus">Ausstehend</span></p>
-                </div>
             </div>
         </div>
 
-        <!-- Scheduling & Lessons -->
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <div class="card lesson-card p-3">
-                    <h5>Lesson Booking</h5>
-                    <p>Klicken Sie auf ein Datum im Kalender, um eine Lektion zu buchen.</p>
-                </div>
-                <div class="card calendar p-3">
-                    <h5>Verfügbarkeitskalender</h5>
-                    <div id="calendar" class="d-flex flex-wrap gap-2">
-                        <!-- JS will populate calendar slots -->
-                    </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-hourglass-half fa-2x text-success mb-2"></i>
+                <h6 class="card-title fw-bold">Fahrstunden</h6>
+                <p class="mb-2"><span id="hoursLogged">0</span> / <span id="hoursRequired">50</span> Stunden</p>
+                <div class="progress" style="height:8px;">
+                <div id="hoursProgress" class="progress-bar bg-success" role="progressbar" style="width:0%"></div>
                 </div>
             </div>
-
-            <div class="col-lg-6">
-                <div class="card lesson-card p-3">
-                    <h5>Nächste Lektionen</h5>
-                    <ul class="list-group" id="lesson-list">
-                        <!-- JS will populate lessons -->
-                    </ul>
-                </div>
-
-                <div class="card lesson-card p-3 mt-3">
-                    <h5>Automatisierte Benachrichtigungen</h5>
-                    <ul>
-                        <li>E-Mails zur Unterrichtsbestätigung</li>
-                        <li>Erinnerungs-SMS vor dem Unterricht</li>
-                        <li>Zahlungserinnerungen</li>
-                    </ul>
-                </div>
             </div>
         </div>
 
-        <div class="text-end mt-4">
-            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-calendar-alt fa-2x text-warning mb-2"></i>
+                <h6 class="card-title fw-bold">Straßentest Countdown</h6>
+                <p class="mb-0"><span id="roadTestDays">7</span> Tage übrig</p>
+            </div>
+            </div>
         </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-wallet fa-2x text-danger mb-2"></i>
+                <h6 class="card-title fw-bold">Zahlung</h6>
+                <p class="mb-0">Balance: €<span id="balance">1200</span></p>
+                <p class="mb-0">Status: <span id="paymentStatus">Ausstehend</span></p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Client Information & License -->
+        <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <h5 class="fw-bold mb-3">Persönliche Informationen</h5>
+                <p><strong>Name:</strong> <span id="clientName">-</span></p>
+                <p><strong>Email:</strong> <span id="clientEmail">-</span></p>
+                <p><strong>Telefon:</strong> <span id="clientPhone">-</span></p>
+                <p><strong>Adresse:</strong> <span id="clientAddress">-</span></p>
+                <p><strong>Geburtsdatum:</strong> <span id="clientDOB">-</span></p>
+                <p><strong>Marketing Opt-In:</strong> <span id="clientMarketing">Nein</span></p>
+                <a href="konto.html" class="btn btn-outline-primary btn-sm mt-2">Profil bearbeiten</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <h5 class="fw-bold mb-3">Führerschein & Kurse</h5>
+                <p><strong>Kategorie:</strong> <span id="clientLicense">B</span></p>
+                <p><strong>Kurse gebucht:</strong> <span id="clientCourses">Auto, Motorrad</span></p>
+                <p><strong>Nächste Lektionen:</strong></p>
+                <ul class="list-group mb-3" id="lesson-list">
+                <!-- JS will populate -->
+                </ul>
+                <a href="#" class="btn btn-success btn-sm" onclick="alert('Neue Lektion buchen!')">Neue Lektion buchen</a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Driving License Options -->
+        <div class="row g-4 mb-4">
+        <div class="col-12">
+            <div class="license-options">
+            
+            <!-- Express Driving License -->
+            <div class="license-card">
+                <h6>Express Führerschein</h6>
+                <p>Lieferzeit: <strong>2 Wochen</strong></p>
+                <p>Alle notwendigen Kurse:</p>
+                <ul>
+                <li>Erste Hilfe Kurs - 50€</li>
+                <li>Theoretischer Unterricht - 200€</li>
+                <li>Praktische Fahrstunden (12h) - 480€</li>
+                <li>Sehtest - 20€</li>
+                <li>Verwaltungsgebühren - 100€</li>
+                </ul>
+                <p><strong>Gesamtpreis: 850€</strong></p>
+            </div>
+
+            <!-- Standard Driving License -->
+            <div class="license-card">
+                <h6>Standard Führerschein</h6>
+                <p>Lieferzeit: <strong>Normale Dauer</strong></p>
+                <p>Alle notwendigen Kurse:</p>
+                <ul>
+                <li>Erste Hilfe Kurs - 50€</li>
+                <li>Theoretischer Unterricht - 200€</li>
+                <li>Praktische Fahrstunden (20h) - 800€</li>
+                <li>Sehtest - 20€</li>
+                <li>Verwaltungsgebühren - 100€</li>
+                </ul>
+                <p><strong>Gesamtpreis: 1170€</strong></p>
+            </div>
+
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Calendar & Notifications -->
+        <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <h5 class="fw-bold mb-3">Verfügbarkeitskalender</h5>
+                <div id="calendar" class="d-flex flex-wrap gap-2">
+                <!-- JS will populate -->
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <h5 class="fw-bold mb-3">Benachrichtigungen</h5>
+                <ul class="list-unstyled">
+                <li><i class="fas fa-envelope text-primary me-2"></i>E-Mail zur Unterrichtsbestätigung</li>
+                <li><i class="fas fa-bell text-warning me-2"></i>Erinnerungs-SMS vor dem Unterricht</li>
+                <li><i class="fas fa-credit-card text-success me-2"></i>Zahlungserinnerungen</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Logout -->
+        <div class="text-end">
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+
     </div>
     </div>
-
     <!-- Dashboard End -->
+
 
 
     <!-- ID Card Form Start -->
@@ -494,18 +585,19 @@
         <!-- Footer End -->
     
     <!-- Copyright Start -->
-    <div class="container-fluid copyright text-body py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center text-md-end mb-md-0">
-                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-start">
-                    Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="index.html">Führerschein Europa</a>, Alle Rechte vorbehalten.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        Design von <a class="text-white" href="#">Hybriid</a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- Copyright End -->
 
     <!-- Back to Top -->
@@ -523,6 +615,13 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Flatpickr -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+   <!-- Tippy.js -->
+   <script src="https://unpkg.com/@popperjs/core@2"></script>
+   <script src="https://unpkg.com/tippy.js@6"></script>
     
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

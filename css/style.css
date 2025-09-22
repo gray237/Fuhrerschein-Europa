@@ -152,40 +152,102 @@
 /*** Topbar End ***/
 
 /* Dashboard dropdown on hover */
-#header-auth .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; /* optional: remove gap */
+/* General Dashboard Styles */
+.dashboard {
+  font-family: 'Nunito', sans-serif;
 }
 
-#header-auth .dropdown-toggle::after {
-    display: none; /* hides the default caret if you prefer */
+/* Card Styles */
+.dashboard .card {
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.dashboard .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
 }
 
-/* Warning Message */
-
-.warning .container .section-about-title {
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    color: var(--bs-primary);
-    padding: 16px 16px 16px 12px;
-    background-color: #F3F6FC;
-    border-radius: 8px;
-    margin: 24px 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    display: flex
-;
-    border: 1px solid #CFDAF5;
-    color: #262B38;
+/* Card Headers & Titles */
+.dashboard .card h5, .dashboard .card h6 {
+  font-weight: 700;
+}
+.dashboard .card .card-title {
+  margin-bottom: 10px;
 }
 
-@media (min-width: 480px) {
-    div.warning:not(.message) {
-        padding: 16px 24px 16px 16px;
-    }
+/* At-a-Glance Icons */
+.dashboard .card i {
+  display: block;
+  margin-bottom: 10px;
 }
+
+/* Progress Bars */
+.dashboard .progress {
+  height: 10px;
+  border-radius: 8px;
+  background-color: #e9ecef;
+}
+.dashboard .progress-bar {
+  border-radius: 8px;
+}
+
+/* List Group Lessons */
+#lesson-list li {
+  cursor: grab;
+  transition: background-color 0.2s;
+}
+#lesson-list li:hover {
+  background-color: #f8f9fa;
+}
+
+/* Calendar Slots */
+#calendar div {
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+#calendar div:hover {
+  transform: translateY(-3px);
+  background-color: #e2e6ea;
+}
+
+/* Notifications List */
+.dashboard .card ul li {
+  margin-bottom: 8px;
+}
+
+/* Driving License Options Container */
+.license-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.license-options .license-card {
+  flex: 1 1 45%;
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.license-options .license-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+.license-options .license-card h6 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.license-options .license-card ul li {
+  margin-bottom: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .license-options .license-card {
+    flex: 1 1 100%;
+  }
+}
+
 
 
 
@@ -2031,3 +2093,76 @@
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+/*** Register Start ***/
+
+    /* Small additions for wizard visuals */
+    .wizard-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(20, 20, 20, 0.08);
+    }
+
+    .wizard-step {
+      display: none;
+    }
+
+    .wizard-step.active {
+      display: block;
+    }
+
+    .step-pill {
+      min-width: 100px;
+      text-align: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .step-pill.active {
+      background: #0d6efd;
+      color: white;
+    }
+
+    .course-card {
+      cursor: pointer;
+      border: 1px solid #e6e6e6;
+      transition: transform .12s, box-shadow .12s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(13, 110, 253, 0.08);
+    }
+
+    .course-card.selected {
+      border-color: #0d6efd;
+      box-shadow: 0 8px 30px rgba(13, 110, 253, 0.12);
+    }
+
+    .password-meter {
+      height: 6px;
+      background: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .password-meter > span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      transition: width .25s;
+      background: #dc3545;
+    }
+
+    .file-preview {
+      max-height: 120px;
+      object-fit: contain;
+    }
+
+    /* small helper for review */
+    .review-row { gap: 8px; }
+    
+/*** Register End ***/
