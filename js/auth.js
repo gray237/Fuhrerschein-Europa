@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("loginForm");
-  const registerForm = document.getElementById("registrationForm"); 
+  const registerForm = document.getElementById("registrationForm");
   const header = document.getElementById("header-auth");
 
   // -----------------------
@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const data = await res.json();
         localStorage.setItem("loggedInUser", JSON.stringify(data.user));
+        alert("Login successful!");
         window.location.href = "armaturenbrett.html";
 
       } catch (err) {
@@ -42,9 +43,109 @@ document.addEventListener("DOMContentLoaded", () => {
   // REGISTRATION (Wizard)
   // -----------------------
   if (registerForm) {
-    // Wizard logic and UI unchanged
-    // ...
+    // Wizard steps
+    const steps = Array.from(document.querySelectorAll('.wizard-step'));
+    const progressBar = document.getElementById('wizard-progress');
+    const pills = {
+      1: document.getElementById('pill-1'),
+      2: document.getElementById('pill-2'),
+      3: document.getElementById('pill-3'),
+      4: document.getElementById('pill-4'),
+      5: document.getElementById('pill-5')
+    };
+    let current = 1;
+    const total = steps.length;
 
+    function showStep(n) {
+      steps.forEach(s => s.classList.remove('active'));
+      const stepEl = document.querySelector(`.wizard-step[data-step="${n}"]`);
+      if (!stepEl) return;
+      stepEl.classList.add('active');
+
+      Object.keys(pills).forEach(k => {
+        pills[k].classList.toggle('active', Number(k) === n);
+      });
+
+      const pct = Math.round(((n - 1) / (total - 1)) * 100);
+      if (progressBar) {
+        progressBar.style.width = pct + '%';
+        progressBar.setAttribute('aria-valuenow', pct);
+      }
+      current = n;
+    }
+
+    function validateStep(n) {
+      const step = document.querySelector(`.wizard-step[data-step="${n}"]`);
+      if (!step) return true;
+      let ok = true;
+      const requiredElems = Array.from(step.querySelectorAll('[required]'));
+      requiredElems.forEach(el => {
+        if (el.type === 'checkbox') {
+          if (!el.checked) {
+            el.classList.add('is-invalid');
+            ok = false;
+          } else {
+            el.classList.remove('is-invalid');
+          }
+          return;
+        }
+        if (!el.value || el.value.trim() === '') {
+          el.classList.add('is-invalid');
+          ok = false;
+        } else {
+          el.classList.remove('is-invalid');
+        }
+      });
+      return ok;
+    }
+
+    // Next / Prev buttons
+    document.querySelectorAll('[data-action="next"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!validateStep(current)) return;
+        if (current < total) showStep(current + 1);
+      });
+    });
+
+    document.querySelectorAll('[data-action="prev"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (current > 1) showStep(current - 1);
+      });
+    });
+
+    // Build review summary
+    function buildReview() {
+      const selectedCourses = Array.from(document.querySelectorAll('.course-card.selected'))
+        .map(c => c.querySelector('.fw-bold').textContent.trim());
+      const summary = {
+        Standort: `${document.getElementById('city').value || '-'} (${document.getElementById('zip').value || '-'})`,
+        Name: `${document.getElementById('firstName').value || '-'} ${document.getElementById('lastName').value || '-'}`,
+        EMail: document.getElementById('email').value || '-',
+        Telefon: document.getElementById('phone').value || '-',
+        Geburtsdatum: document.getElementById('dob').value || '-',
+        Adresse: `${document.getElementById('street').value || '-'}, ${document.getElementById('addrCity').value || '-'}`,
+        Kurse: selectedCourses.length ? selectedCourses.join(', ') : '-',
+        Nutzername: document.getElementById('username').value || '-',
+        Marketing: document.getElementById('marketingOptIn')?.checked ? 'Ja' : 'Nein'
+      };
+      const reviewSection = document.getElementById('reviewSection');
+      reviewSection.innerHTML = '';
+      Object.entries(summary).forEach(([k, v]) => {
+        const row = document.createElement('div');
+        row.className = 'd-flex justify-content-between align-items-start border-bottom py-2';
+        row.innerHTML = `<div class="fw-bold">${k}</div><div class="text-end text-muted" style="max-width:60%">${v}</div>`;
+        reviewSection.appendChild(row);
+      });
+    }
+
+    // Show review on last step
+    document.querySelectorAll('[data-action="next"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (current + 1 === total) buildReview();
+      });
+    });
+
+    // Registration submit
     registerForm.addEventListener('submit', async (ev) => {
       ev.preventDefault();
       if (!validateStep(current)) return;
@@ -80,6 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         alert("Registrierung erfolgreich! Bitte logge dich ein.");
         registerForm.reset();
+        document.querySelectorAll('.course-card.selected').forEach(c => c.classList.remove('selected'));
         showStep(1);
 
         const loginTab = new bootstrap.Tab(document.getElementById('login-tab'));
