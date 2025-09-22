@@ -1,8 +1,8 @@
 // /netlify/functions/register-user.js
-import fetch from "node-fetch";
-import bcrypt from "bcryptjs";
+const fetch = require("node-fetch");
+const bcrypt = require("bcryptjs");
 
-export async function handler(event) {
+exports.handler = async function (event) {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
@@ -15,7 +15,7 @@ export async function handler(event) {
 
     const userPayload = {
       ...data,
-      password: hashedPassword
+      password: hashedPassword,
     };
 
     const response = await fetch(`${process.env.SUPABASE_URL}/rest/v1/users`, {
@@ -24,7 +24,7 @@ export async function handler(event) {
         "Content-Type": "application/json",
         apikey: process.env.SUPABASE_SERVICE_KEY,
         Authorization: `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
-        Prefer: "return=representation"
+        Prefer: "return=representation",
       },
       body: JSON.stringify(userPayload),
     });
@@ -40,9 +40,8 @@ export async function handler(event) {
       statusCode: 200,
       body: JSON.stringify({ message: "User registered", user: newUser }),
     };
-
   } catch (err) {
     console.error(err);
     return { statusCode: 500, body: "Error registering user" };
   }
-}
+};

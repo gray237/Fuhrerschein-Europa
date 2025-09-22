@@ -1,0 +1,17 @@
+{
+  "name": "fuhrerschein-europa",
+  "version": "1.0.0",
+  "description": "Netlify Functions for login and registration with Supabase",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "node-fetch": "^2.7.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
