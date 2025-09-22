@@ -1,6 +1,6 @@
 // /netlify/functions/register-user.js
 import fetch from "node-fetch";
-import bcrypt from "bcryptjs"; // use bcryptjs for easier Netlify support
+import bcrypt from "bcryptjs";
 
 export async function handler(event) {
   if (event.httpMethod !== "POST") {
@@ -10,9 +10,13 @@ export async function handler(event) {
   const data = JSON.parse(event.body);
 
   try {
-    // Hash the password before saving
-    const hashedPassword = await bcrypt.hash(data.password, 10); // 10 rounds
-    data.password = hashedPassword;
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(data.password, 10);
+
+    const userPayload = {
+      ...data,
+      password: hashedPassword
+    };
 
     const response = await fetch(`${process.env.SUPABASE_URL}/rest/v1/users`, {
       method: "POST",
@@ -20,9 +24,9 @@ export async function handler(event) {
         "Content-Type": "application/json",
         apikey: process.env.SUPABASE_SERVICE_KEY,
         Authorization: `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
-        Prefer: "return=representation",
+        Prefer: "return=representation"
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(userPayload),
     });
 
     if (!response.ok) {
@@ -30,13 +34,15 @@ export async function handler(event) {
       return { statusCode: 500, body: error };
     }
 
-    const user = await response.json();
+    const newUser = await response.json();
+
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "User registered", user }),
+      body: JSON.stringify({ message: "User registered", user: newUser }),
     };
+
   } catch (err) {
     console.error(err);
-    return { statusCode: 500, body: "Error saving user" };
+    return { statusCode: 500, body: "Error registering user" };
   }
 }
