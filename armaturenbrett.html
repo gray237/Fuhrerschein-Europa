@@ -131,7 +131,7 @@
     <!-- Dashboard Start -->
     <div class="container-fluid py-5 bg-light">
     <div class="container dashboard">
-        
+
         <!-- Welcome Header -->
         <div class="text-center mb-5">
         <h1 class="fw-bold">Willkommen, <span id="userName">Student</span></h1>
@@ -210,6 +210,10 @@
                 <h5 class="fw-bold mb-3">Führerschein & Kurse</h5>
                 <p><strong>Kategorie:</strong> <span id="clientLicense">B</span></p>
                 <p><strong>Kurse gebucht:</strong> <span id="clientCourses">Auto, Motorrad</span></p>
+
+                <!-- Courses Container (dynamically populated by JS) -->
+                <div id="courses-container" class="row g-3 mb-3"></div>
+
                 <p><strong>Nächste Lektionen:</strong></p>
                 <ul class="list-group mb-3" id="lesson-list">
                 <!-- JS will populate -->
@@ -224,7 +228,7 @@
         <div class="row g-4 mb-4">
         <div class="col-12">
             <div class="license-options">
-            
+
             <!-- Express Driving License -->
             <div class="license-card">
                 <h6>Express Führerschein</h6>
@@ -259,7 +263,6 @@
         </div>
         </div>
 
-
         <!-- Calendar & Notifications -->
         <div class="row g-4 mb-4">
         <div class="col-lg-6">
@@ -278,12 +281,22 @@
             <div class="card-body">
                 <h5 class="fw-bold mb-3">Benachrichtigungen</h5>
                 <ul class="list-unstyled">
-                <li><i class="fas fa-envelope text-primary me-2"></i>E-Mail zur Unterrichtsbestätigung</li>
-                <li><i class="fas fa-bell text-warning me-2"></i>Erinnerungs-SMS vor dem Unterricht</li>
-                <li><i class="fas fa-credit-card text-success me-2"></i>Zahlungserinnerungen</li>
+                <li class="d-flex align-items-center mb-2">
+                    <i class="fas fa-envelope text-primary me-2"></i>
+                    <span>E-Mail zur Unterrichtsbestätigung</span>
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                    <i class="fas fa-bell text-warning me-2"></i>
+                    <span>Erinnerungs-SMS vor dem Unterricht</span>
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                    <i class="fas fa-credit-card text-success me-2"></i>
+                    <span>Zahlungserinnerungen</span>
+                </li>
                 </ul>
             </div>
             </div>
+
         </div>
         </div>
 
@@ -295,6 +308,7 @@
     </div>
     </div>
     <!-- Dashboard End -->
+
 
 
 

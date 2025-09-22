@@ -151,7 +151,7 @@
 }
 /*** Topbar End ***/
 
-/* Dashboard dropdown on hover */
+
 /* General Dashboard Styles */
 .dashboard {
   font-family: 'Nunito', sans-serif;
@@ -246,6 +246,97 @@
   .license-options .license-card {
     flex: 1 1 100%;
   }
+}
+
+/* Calendar slot card style */
+#calendar .calendar-slot {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  flex: 0 0 120px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#calendar .calendar-slot:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#calendar .calendar-slot.booked.in-car {
+  background-color: #0d6efd;
+  color: white;
+}
+
+#calendar .calendar-slot.booked.classroom {
+  background-color: #ffc107;
+  color: black;
+}
+
+#calendar .calendar-slot small {
+  display: block;
+  font-size: 0.8rem;
+}
+
+.license-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.license-card {
+  flex: 1 1 300px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  padding: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.license-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.license-card h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.license-card p, .license-card ul {
+  margin-bottom: 0.5rem;
+}
+
+.license-card ul {
+  padding-left: 1.2rem;
+}
+
+/* Course card colors */
+.course-card.auto {
+  border-left: 5px solid #0d6efd; /* blue for Auto */
+}
+
+.course-card.motorrad {
+  border-left: 5px solid #ffc107; /* yellow for Motorrad */
+}
+
+/* Calendar slot matching course type */
+.calendar-slot.in-car {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.calendar-slot.classroom {
+  background-color: #ffc107;
+  color: black;
+}
+
+.course-card.booked-lesson {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.4);
 }
 
 
@@ -1317,6 +1408,78 @@
 
 
 /*** Banner End ***/
+
+/*** Register banner Start ***/
+.lesson-exam-banner-container {
+  max-width: 1140px; /* same as typical Bootstrap container */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.lesson-exam-banner {
+  width: 100%;
+  max-width: 1200px; /* fits page content */
+  margin: 0 auto; /* center container */
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 16px;
+  background-image: url('../img/fuhrerschein-registerung-banner.jpg');
+  background-size: cover;
+  background-position: top center; /* <-- show top of image */
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+
+.lesson-exam-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35); /* dark overlay for readability */
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.lesson-exam-banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.lesson-exam-banner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.lesson-exam-banner-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #f8f9fa;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 767px) {
+  .lesson-exam-banner {
+    padding: 24px;
+    background-position: center center;
+  }
+
+  .lesson-exam-banner-title {
+    font-size: 1.5rem;
+  }
+
+  .lesson-exam-banner-subtitle {
+    font-size: 0.9rem;
+  }
+}
+/*** Register Banner End ***/
 
 /*** Faq Start ***/
 

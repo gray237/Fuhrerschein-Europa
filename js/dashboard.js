@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     user.paymentStatus || "Ausstehend";
 
   // -----------------------
-  // Client Information (from registration form)
+  // Client Information
   // -----------------------
   document.getElementById("clientName").textContent =
     `${user.first_name || "-"} ${user.last_name || "-"}`;
@@ -63,6 +63,37 @@ document.addEventListener("DOMContentLoaded", () => {
     user.licenseCategory || "-";
   document.getElementById("clientUsername").textContent =
     user.username || "-";
+
+  // -----------------------
+  // Populate Courses as Cards (Führerschein & Kurse)
+  // -----------------------
+  const coursesContainer = document.querySelector("#courses-container"); // Add this div in dashboard HTML
+  if (coursesContainer && user.courses?.length) {
+    coursesContainer.innerHTML = user.courses
+      .map((course) => {
+        const label = course === "B" ? "Auto" : course === "A" ? "Motorrad" : course;
+        const typeClass = course === "B" ? "auto" : course === "A" ? "motorrad" : "";
+        return `
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="p-3 course-card h-100 rounded selected ${typeClass}" data-value="${course}" tabindex="0">
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <span class="icon-b-sport-class-circle fa-2x text-primary"><i class="fas fa-car"></i></span>
+                </div>
+                <div>
+                  <div class="fw-bold">${label}</div>
+                  <div class="text-muted small">Klasse ${course}</div>
+                </div>
+                <div class="ms-auto form-check form-switch">
+                  <input class="form-check-input course-toggle" type="checkbox" checked>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
+  }
 
   // -----------------------
   // Lessons (static / local)
@@ -93,6 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       )
       .join("");
+
+    highlightBookedCourses();
   }
 
   renderLessons();
@@ -115,39 +148,73 @@ document.addEventListener("DOMContentLoaded", () => {
     saveLessons();
   });
 
+  // -----------------------
+  // Calendar (Enhanced)
+  // -----------------------
   function renderCalendar() {
     calendar.innerHTML = "";
-    for (let i = 0; i < 7; i++) {
-      const date = new Date();
-      date.setDate(date.getDate() + i);
+    const today = new Date();
+    for (let i = 0; i < 14; i++) {
+      const date = new Date(today);
+      date.setDate(today.getDate() + i);
+      const dateStr = date.toISOString().split("T")[0];
+
+      const lesson = lessons.find(l => l.date === dateStr);
+
       const slot = document.createElement("div");
-      slot.className = "p-2 bg-light border rounded text-center flex-fill";
-      slot.style.width = "120px";
-      slot.textContent = date.toISOString().split("T")[0];
-      slot.addEventListener("click", () => bookLesson(date));
+      slot.className = "calendar-slot";
+
+      if (lesson) {
+        const typeClass = lesson.type === "In-Car" ? "in-car" : lesson.type === "Classroom" ? "classroom" : "";
+        slot.classList.add("booked", typeClass);
+        slot.innerHTML = `<small>${dateStr}</small><br><strong>${lesson.type}</strong>`;
+      } else {
+        slot.innerHTML = `<small>${dateStr}</small><br><small>Frei</small>`;
+      }
+
+      slot.addEventListener("click", () => {
+        if (lesson) {
+          alert(`${lesson.type} lesson already booked on ${dateStr}`);
+        } else {
+          const type = prompt("Enter lesson type (In-Car / Classroom):", "In-Car");
+          if (!type) return;
+          lessons.push({ type, date: dateStr, status: "Pending" });
+          renderLessons();
+          renderCalendar();
+          saveLessons();
+          alert("Lesson booked successfully!");
+        }
+      });
+
       calendar.appendChild(slot);
     }
   }
 
-  function bookLesson(date) {
-    const type = prompt("Enter lesson type (In-Car / Classroom):", "In-Car");
-    if (!type) return;
-    lessons.push({
-      type,
-      date: date.toISOString().split("T")[0],
-      status: "Pending"
+  renderCalendar();
+
+  // -----------------------
+  // Highlight course cards with booked lessons
+  // -----------------------
+  function highlightBookedCourses() {
+    document.querySelectorAll(".course-card").forEach(card => {
+      const courseValue = card.dataset.value;
+      const booked = lessons.some(l => (l.type === "In-Car" && courseValue === "B") || 
+                                       (l.type === "Classroom" && courseValue === "A"));
+      if (booked) {
+        card.classList.add("booked-lesson");
+      } else {
+        card.classList.remove("booked-lesson");
+      }
     });
-    renderLessons();
-    saveLessons();
-    alert("Lesson booked successfully!");
   }
 
+  // -----------------------
+  // Save lessons to localStorage
+  // -----------------------
   function saveLessons() {
     user.lessons = lessons;
     localStorage.setItem("loggedInUser", JSON.stringify(user));
   }
-
-  renderCalendar();
 
   // -----------------------
   // Logout
