@@ -1,8 +1,8 @@
 // /netlify/functions/login-user.js
-const fetch = require("node-fetch");
-const bcrypt = require("bcryptjs");
+import fetch from "node-fetch";
+import bcrypt from "bcryptjs";
 
-exports.handler = async function (event) {
+export async function handler(event) {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
@@ -45,4 +45,4 @@ exports.handler = async function (event) {
     console.error(err);
     return { statusCode: 500, body: "Error logging in" };
   }
-};
+}

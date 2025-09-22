@@ -1,8 +1,8 @@
 // /netlify/functions/register-user.js
-const fetch = require("node-fetch");
-const bcrypt = require("bcryptjs");
+import fetch from "node-fetch";
+import bcrypt from "bcryptjs";
 
-exports.handler = async function (event) {
+export async function handler(event) {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
@@ -14,8 +14,19 @@ exports.handler = async function (event) {
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
     const userPayload = {
-      ...data,
+      first_name: data.first_name,
+      last_name: data.last_name,
+      email: data.email,
+      username: data.username,
       password: hashedPassword,
+      phone: data.phone || null,
+      dob: data.dob || null,
+      street: data.street || null,
+      city: data.city || null,
+      state: data.state || null,
+      country: data.country || null,
+      courses: data.courses || [],
+      marketing: data.marketing || false,
     };
 
     const response = await fetch(`${process.env.SUPABASE_URL}/rest/v1/users`, {
@@ -24,7 +35,7 @@ exports.handler = async function (event) {
         "Content-Type": "application/json",
         apikey: process.env.SUPABASE_SERVICE_KEY,
         Authorization: `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
-        Prefer: "return=representation",
+        Prefer: "return=representation"
       },
       body: JSON.stringify(userPayload),
     });
@@ -40,8 +51,9 @@ exports.handler = async function (event) {
       statusCode: 200,
       body: JSON.stringify({ message: "User registered", user: newUser }),
     };
+
   } catch (err) {
     console.error(err);
     return { statusCode: 500, body: "Error registering user" };
   }
-};
+}
